@@ -10,3 +10,6 @@ Metrics/LineLength:
 
 Documentation:
   Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
