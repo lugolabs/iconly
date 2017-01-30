@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = 'iconly'
   s.version     = Iconly::VERSION
   s.authors     = ['Artan Sinani']
-  s.email       = ['artisinani@gmail.com']
+  s.email       = %w(artisinani@gmail.com)
   s.homepage    = 'https://github.com/lugolabs/iconly'
   s.summary     = 'Store SVG and generate your web font icons'
   s.description = 'Store SVG and generate your web font icons with Iconly.'
@@ -18,6 +18,46 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.0.1'
 
+  s.add_dependency 'coffee-rails', '~> 4.2'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'sass-rails', '~> 5.0'
+  s.add_dependency 'turbolinks', '~> 5'
+  s.add_dependency 'uglifier', '>= 1.3.0'
+
+  # Bootstrap
+  s.add_dependency 'bootstrap', '~> 4.0.0.alpha6'
+  s.add_dependency 'rails-assets-tether', '>= 1.1.0'#, source: 'https://rails-assets.org'
+
+  # Timeout
+  # s.add_dependency 'rack-timeout'
+
+  # Database
+  s.add_dependency 'pg'
+
+  # Slugging
+  s.add_dependency 'friendly_id', '~> 5.0.0'
+
+  # Exceptions
+  s.add_dependency 'exception_notification'#, git: 'https://github.com/smartinez87/exception_notification'
+
+  # ENV management
+  s.add_dependency 'figaro'
+
+  # Fonts
+  s.add_dependency 'fontcustom', '~> 1.3.8'
+  s.add_dependency 'listen', '< 3.0'
+
+  # Upload
+  s.add_dependency 'carrierwave', '~> 1.0'
+
+  # Zipping
+  s.add_dependency 'rubyzip', '>= 1.0.0'
+
+  # Development group
+
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rubocop'
+
+  # Use Puma as the app server
+  s.add_development_dependency 'puma', '~> 3.0'
 end
