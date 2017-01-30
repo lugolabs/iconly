@@ -1,3 +1,10 @@
+AllCops:
+  Exclude:
+    - test/dummy/db/schema.rb
+    - test/dummy/db/migrate/*
+    - iconly.gemspec
+    - bin/*
+
 Metrics/LineLength:
   Max: 125
 

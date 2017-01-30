@@ -1,3 +1,4 @@
+require 'friendly_id'
 require 'iconly/engine'
 
 module Iconly

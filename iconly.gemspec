@@ -55,7 +55,7 @@ Gem::Specification.new do |s|
 
   # Development group
 
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'mocha'
   s.add_development_dependency 'rubocop'
 
   # Use Puma as the app server

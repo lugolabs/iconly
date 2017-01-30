@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+jupiter:
+  user: fred
+  name: Jupiter
+  shared: true
+  slug: jupiter
+
+mars:
+  user: fred
+  name: Mars
+  shared: false
+  slug: fred

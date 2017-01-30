@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for package, html: { multipart: true } do |f| %>
+      <% if package.errors.any? %>
+        <div class="alert alert-danger">
+          <ul>
+          <% package.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Choose a name' %>
+      </div>
+
+      <div class="actions mt-5">
+        <%= f.submit 'Save', class: 'btn btn-success' %> &nbsp;or
+        <%= link_to 'Cancel', packages_path, class: 'text-danger' %>
+      </div>
+    <% end %>
+  </div>
+</div>
