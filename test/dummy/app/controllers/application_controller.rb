@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_current_user
-    session[:user_id] ||= Iconly::User.first.id
+    session[:user_id] = Iconly::User.first.id
   end
 end

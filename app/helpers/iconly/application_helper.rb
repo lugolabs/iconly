@@ -1,5 +1,7 @@
 module Iconly
   module ApplicationHelper
+    include ::ApplicationHelper
+
     def title(content)
       content_for :title do
         content
@@ -19,12 +21,6 @@ module Iconly
           concat div
         end
       end
-    end
-
-    def logout_path
-    end
-
-    def login_path
     end
 
     private

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: fred
+  name: First Project
+  slug: first-project
+
+two:
+  user: fred
+  name: Second Project
+  slug: second-project

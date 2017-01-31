@@ -9,7 +9,33 @@
 
   <div class="row float-left">
     <div class="col-md-6">
-      PROJECTS
+      <div class="collapse navbar-collapse" id="navbar-top-links">
+        <ul class="nav navbar-nav first">
+          <% if signed_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-link-in">Projects</span>
+              </a>
+
+              <div class="dropdown-menu">
+                <% if current_user.projects.any? %>
+                  <% current_user.projects.each do |project| %>
+                    <%= link_to project, class: 'dropdown-item' do %>
+                      <i class="sybina-0184-files mr-05 text-primary"></i>
+                      <%= project.name %>
+                    <% end %>
+                  <% end %>
+                  <div class="dropdown-divider"></div>
+                <% end %>
+                <%= link_to new_project_path, class: 'dropdown-item' do %>
+                  <i class="sybina-0181-file-add mr-05 text-info"></i>
+                  New Project
+                <% end %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <div class="col-md-6">
       <form role="search" class="form-inline app-search pull-xs-left" action="">
