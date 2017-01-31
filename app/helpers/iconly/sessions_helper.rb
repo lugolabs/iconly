@@ -2,6 +2,14 @@ module Iconly
   module SessionsHelper
     protected
 
+    def logout_path
+      '/'
+    end
+
+    def login_path
+      '/'
+    end
+
     def current_user
       unless @current_user
         if (user_id = session[:user_id] || cookies.signed[:user_id])

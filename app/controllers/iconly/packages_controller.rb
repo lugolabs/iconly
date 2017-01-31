@@ -5,10 +5,6 @@ module Iconly
     before_action :require_sign_in
     before_action :set_package, only: :destroy
 
-    def index
-      @packages = Icon.all_packages(current_user.id, params[:q])
-    end
-
     def new
       @package = Package.new
     end

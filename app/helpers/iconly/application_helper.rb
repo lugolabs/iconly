@@ -1,7 +1,5 @@
 module Iconly
   module ApplicationHelper
-    include ::ApplicationHelper
-
     def title(content)
       content_for :title do
         content

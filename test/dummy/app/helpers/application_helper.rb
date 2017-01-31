@@ -1,9 +1,3 @@
 module ApplicationHelper
-  def logout_path
-    '/'
-  end
-
-  def login_path
-    '/'
-  end
+  include Iconly::SessionsHelper, Iconly::Engine.routes.url_helpers, Iconly::ApplicationHelper
 end
