@@ -9,13 +9,6 @@ module Iconly
       @package = iconly_packages(:jupiter)
     end
 
-    test 'should get index' do
-      get packages_url
-
-      assert_response :success
-      assert_select 'title', 'Icons : Iconly'
-    end
-
     test 'should get new' do
       get new_package_url
 
@@ -25,10 +18,15 @@ module Iconly
 
     test 'should create package' do
       assert_difference('Iconly::Package.count') do
-        post packages_url, params: { package: { name: 'Saturn', shared: @package.shared } }
+        post packages_url, params: {
+          package: {
+            name:       'Saturn',
+            icon_files: [File.open(File.join(fixture_path, 'iconly/files/twitter.svg'))]
+          }
+        }
       end
 
-      assert_redirected_to packages_url
+      assert_redirected_to projects_url
     end
 
     test 'should destroy package' do
@@ -36,7 +34,7 @@ module Iconly
         delete package_url(@package)
       end
 
-      assert_redirected_to packages_url
+      assert_redirected_to projects_url
     end
   end
 end

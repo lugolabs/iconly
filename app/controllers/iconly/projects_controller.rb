@@ -5,7 +5,7 @@ module Iconly
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
     def index
-      @projects = current_user.projects.order(:name)
+      @projects = ProjectIcon.all_projects(current_user.id, params[:q])
     end
 
     def show

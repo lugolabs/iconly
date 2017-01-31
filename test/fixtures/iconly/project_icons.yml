@@ -11,7 +11,3 @@ two:
 three:
   project: two
   icon: facebook
-
-fourth:
-  project: two
-  icon: twitter

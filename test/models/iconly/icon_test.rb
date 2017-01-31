@@ -3,7 +3,7 @@ require 'test_helper'
 module Iconly
   class IconTest < ActiveSupport::TestCase
     test 'associations' do
-      assert_equal %i(package), Icon.reflect_on_all_associations.map(&:name)
+      assert_equal %i(package project_icons), Icon.reflect_on_all_associations.map(&:name)
     end
 
     test 'SVG uploader' do

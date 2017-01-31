@@ -1,13 +1,13 @@
 <h1 class="page-header">Projects</h1>
 
-<% @projects.each do |project| %>
+<% @projects.each do |project, project_icons| %>
 
   <h3 class="font-bold text-dark"><%= link_to project.name, project %></h3>
-  <div class="card">
+  <div class="card mb-4">
     <div class="card-block">
-      <% project.icons.each do |icon| %>
-        <div class="btn btn-svg float-left" title="<%= icon.name %>">
-          <%= icon.contents.html_safe %>
+      <% project_icons.each do |project_icon| %>
+        <div class="btn btn-svg float-left" title="<%= project_icon.icon.name %>">
+          <%= project_icon.icon.contents.html_safe %>
         </div>
       <% end %>
     </div>

@@ -3,6 +3,7 @@ module Iconly
     SVG_FOLDER = 'test/dummy/public'.freeze
 
     belongs_to :package, class_name: 'Package'
+    has_many :project_icons, dependent: :destroy
 
     mount_uploader :svg, SvgUploader
 
@@ -15,8 +16,7 @@ module Iconly
 
     def self.all_packages(user_id, term = nil)
       with_package = user_id ? Package.shared_or_owned_by(user_id) : Package.shared
-      icons = Icon
-              .includes(:package)
+      icons = includes(:package)
               .joins(:package)
               .merge(with_package)
       icons = icons.merge(search(term)) if term.present?
