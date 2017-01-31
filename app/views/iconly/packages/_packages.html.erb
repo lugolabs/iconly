@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-2 hidden-sm-down">
+    <div class="sidebar" id="sticky-packages">
+      <h4 class="text-pale brd-btm">
+        Packages
+        <span class="badge badge-pale float-right"><%= packages.size %></span>
+      </h4>
+
+      <% packages.each do |package, _| %>
+        <%= link_to "##{package.to_param}",
+          'data-scroll-to' => package.to_param,
+          class: 'text-pale text-bold' do %>
+          <i class="mr-05 text-default"></i>
+          <%= package.name %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-8 col-sm-12 project-pkg-<%= project.present? %>">
+    <% packages.each do |package, icons| %>
+
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="font-bold" id="<%= package.to_param %>"><%= package.name %></h3>
+        </div>
+        <div class="col-md-4 text-right inline-links">
+          <% if my_package?(package) %>
+            <%= link_to_share package %>
+
+            <%= link_to package,
+              method: :delete,
+              class: 'text-danger mt-05 list-inline-item text-sm',
+              data: { confirm: 'You sure you want to delete this package?' } do %>
+              <i class="text-pale"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="card m-b-2">
+        <div class="card-block">
+          <% icons.each do |icon| %>
+            <%= icon_svg icon, project_icons %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <% if project %>
+    <div class="col-md-2 hidden-sm-down project-pkg-true">
+      <div id="sticky-project-icons">
+        <h4 class="text-pale brd-btm">
+          Project Icons
+          <span class="badge badge-pale float-right" id="project-icons-count"><%= project.icons.size %></span>
+        </h4>
+        <div id="project-icons">
+          <% project.icons.each do |icon| %>
+            <div class="btn btn-svg btn-sm remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
+              <%= icon.contents.html_safe %>
+              <i class="bg-danger text-white rm"></i>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div> <!-- end row -->
+
+<%= content_for :script do %>
+  <script>
+    $(function() {
+      var options = { topSpacing: 70 };
+      $('#sticky-packages').sticky(options);
+      $('#sticky-project-icons').sticky(options);
+      new app.Scroller(options)
+    });
+  </script>
+<% end %>

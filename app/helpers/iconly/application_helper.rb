@@ -24,6 +24,9 @@ module Iconly
     def logout_path
     end
 
+    def login_path
+    end
+
     private
 
     def alert_class_name(flash_name)

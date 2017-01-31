@@ -5,8 +5,7 @@ module Iconly
     include Engine.routes.url_helpers
 
     setup do
-      user = iconly_users(:fred)
-      ApplicationController.any_instance.stubs(:current_user).returns(user)
+      ApplicationController.any_instance.stubs(:current_user).returns(iconly_users(:fred))
       @package = iconly_packages(:jupiter)
     end
 
@@ -26,7 +25,7 @@ module Iconly
 
     test 'should create package' do
       assert_difference('Iconly::Package.count') do
-        post packages_url, params: { package: { name: @package.name, shared: @package.shared } }
+        post packages_url, params: { package: { name: 'Saturn', shared: @package.shared } }
       end
 
       assert_redirected_to packages_url

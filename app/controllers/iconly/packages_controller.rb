@@ -6,7 +6,7 @@ module Iconly
     before_action :set_package, only: :destroy
 
     def index
-      @packages = current_user.packages.order(:name)
+      @packages = Icon.all_packages(current_user.id, params[:q])
     end
 
     def new
@@ -17,15 +17,19 @@ module Iconly
       @package = current_user.packages.build(package_params)
 
       if @package.save
-        redirect_to packages_url, notice: 'Package was successfully created.'
+        redirect_to packages_url, notice: 'Great, more new shiny icons in the bag!'
       else
         render :new
       end
     end
 
+    def share
+      @package.update(shared: !@package.shared)
+    end
+
     def destroy
       @package.destroy
-      redirect_to packages_url, notice: 'Package was successfully destroyed.'
+      redirect_to packages_url, notice: 'Package is now gone'
     end
 
     private
