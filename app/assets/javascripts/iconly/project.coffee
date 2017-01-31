@@ -1,5 +1,5 @@
 class app.Project
-  constructor: (@projectId) ->
+  constructor: (@projectId, @rootUrl) ->
     self = this
     $(document)
       .on('click', '[data-action="add-to-project"]', -> self._toggleInProject(this))
@@ -26,12 +26,12 @@ class app.Project
       @_addToProjectIcons(target.html(), iconId)
 
   _add: (iconId) ->
-    $.post '/project_icons',
+    $.post @rootUrl,
       project_id: @projectId,
       icon_id:    iconId
 
   _remove: (iconId) ->
-    $.post "/project_icons/#{iconId}",
+    $.post "#{@rootUrl}/#{iconId}",
       _method:    'DELETE'
       project_id: @projectId
 
@@ -64,5 +64,5 @@ class app.Project
       target.addClass 'shared'
     $.post url, { _method: 'PATCH', package: { shared: shared } }
 
-  @start: (projectId) ->
-    app.project ||= new app.Project(projectId)
+  @start: (projectId, rootUrl) ->
+    app.project ||= new app.Project(projectId, rootUrl)

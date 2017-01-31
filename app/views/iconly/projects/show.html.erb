@@ -47,7 +47,7 @@
 <%= content_for :script do %>
 <script>
   $(function() {
-    app.Project.start('<%= @project.id %>');
+    app.Project.start('<%= @project.id %>', '<%= project_icons_path %>');
   });
 </script>
 <% end %>
