@@ -12,7 +12,6 @@ module Iconly
         generate
         zip_file_path
       rescue => e
-        ExceptionNotifier.notify_exception e
         Rails.logger.error e
         nil
       end
@@ -23,14 +22,14 @@ module Iconly
         with_glyphs do |path|
           Project::FontGenerator.new(path, output_path).call
         end
-        Project::ZipFileGenerator.new(output_path, zip_file_path).write
+        ZipFileGenerator.new(output_path, zip_file_path).write
       end
 
       def with_glyphs
-        tmp_dir = Dir.mktmpdir
-        FileUtils.cp @project.icons.map(&:svg_path), tmp_dir
-        yield tmp_dir
-        FileUtils.rm_rf tmp_dir
+        Dir.mktmpdir do |dir|
+          FileUtils.cp @project.icons.map(&:svg_path), dir
+          yield dir if block_given?
+        end
       end
 
       def output_path

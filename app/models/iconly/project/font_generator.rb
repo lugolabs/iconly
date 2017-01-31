@@ -18,7 +18,7 @@ module Iconly
         }
 
         raw_options = {
-          debug:        Rails.env.development?,
+          debug:        false,
           input:        input,
           templates:    %w(iconly.css),
           font_name:    @font_name,
@@ -50,11 +50,15 @@ module Iconly
       end
 
       def manifest_path
-        Rails.root.join('config/fontcustom/fontcustom_manifest.yml').to_s
+        File.join(config_folder, 'fontcustom_manifest.yml')
       end
 
       def templates_path
-        Rails.root.join('config/fontcustom/templates').to_s
+        File.join(config_folder, 'templates')
+      end
+
+      def config_folder
+        'config/fontcustom'
       end
     end
   end

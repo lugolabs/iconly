@@ -28,20 +28,11 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap', '~> 4.0.0.alpha6'
   s.add_dependency 'rails-assets-tether', '>= 1.1.0'#, source: 'https://rails-assets.org'
 
-  # Timeout
-  # s.add_dependency 'rack-timeout'
-
   # Database
   s.add_dependency 'pg'
 
   # Slugging
   s.add_dependency 'friendly_id', '~> 5.0.0'
-
-  # Exceptions
-  s.add_dependency 'exception_notification'#, git: 'https://github.com/smartinez87/exception_notification'
-
-  # ENV management
-  s.add_dependency 'figaro'
 
   # Fonts
   s.add_dependency 'fontcustom', '~> 1.3.8'

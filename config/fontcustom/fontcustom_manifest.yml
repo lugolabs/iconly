@@ -1,0 +1,53 @@
+{
+  "checksum": {
+    "current": "",
+    "previous": ""
+  },
+  "fonts": [
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts/iconly.ttf",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts/iconly.svg",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts/iconly.woff",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts/iconly.eot"
+  ],
+  "glyphs": {
+    "facebook": {
+      "codepoint": 61711,
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1rff5si/facebook.svg"
+    },
+    "twitter": {
+      "codepoint": 61712,
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1rff5si/twitter.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".iconly-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "iconly",
+    "force": false,
+    "input": {
+      "templates": "config/fontcustom/templates",
+      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1rff5si"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag",
+      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts",
+      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/fonts"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "iconly.css"
+    ],
+    "verbose": true
+  },
+  "templates": [
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-30939-1chf9ag/iconly.css"
+  ]
+}

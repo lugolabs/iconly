@@ -4,12 +4,10 @@ facebook:
   package: jupiter
   name: facebook
   slug: facebook
-  svg: 'svgs/facebook.svg'
   contents: <svg></svg>
 
 twitter:
   package: jupiter
   name: twitter
   slug: twitter
-  svg: 'svgs/twitter.svg'
   contents: <svg></svg>
