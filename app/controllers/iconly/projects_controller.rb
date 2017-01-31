@@ -10,6 +10,7 @@ module Iconly
     end
 
     def show
+      @packages = Icon.all_packages(current_user.id, params[:q])
     end
 
     def new
@@ -37,6 +38,15 @@ module Iconly
       end
     end
 
+    def generate_font
+      if (zip_file = Project::Downloader.new(@project).call)
+        send_file zip_file
+      else
+        flash[:error] = 'Sorry an error occurred generating the font, please try again.'
+        redirect_to @project
+      end
+    end
+
     def destroy
       @project.destroy
       redirect_to projects_url, notice: 'Project is gone to the bin.'
@@ -45,7 +55,7 @@ module Iconly
     private
 
     def set_project
-      @project = current_user.projects.find(params[:id])
+      @project = current_user.projects.friendly.find(params[:id])
     end
 
     def project_params

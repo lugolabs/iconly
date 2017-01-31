@@ -39,9 +39,9 @@
   </div>
 </div>
 
-<%= render partial: 'packages', locals: {
-  packages: @packages,
-  project: @project,
+<%= render partial: 'iconly/packages/packages', locals: {
+  packages:      @packages,
+  project:       @project,
   project_icons: @project.project_icons.map(&:icon_id) } %>
 
 <%= content_for :script do %>
