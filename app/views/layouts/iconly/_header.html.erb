@@ -1,0 +1,52 @@
+<nav class="app-header navbar navbar-toggleable-sm fixed-top">
+  <button class="navbar-toggler btn btn-custom btn-default" type="button" data-toggle="collapse" data-target="#navbar-top-links" aria-controls="navbar-top-links" aria-expanded="false" aria-label="Toggle navigation">
+    Menu
+  </button>
+
+  <a class="navbar-brand" href="/" title="Iconly">
+    <span>Icon</span><span class="text-default">ly</span>
+  </a>
+
+  <div class="row float-left">
+    <div class="col-md-6">
+      PROJECTS
+    </div>
+    <div class="col-md-6">
+      <form role="search" class="form-inline app-search pull-xs-left" action="">
+          <%= text_field_tag :q, params[:q], placeholder: 'Search ...', class: 'form-control' %>
+      </form>
+    </div>
+  </div>
+
+    <ul class="nav navbar-nav navbar-user">
+    <% if signed_in? %>
+      <li class="dropdown user clearfix">
+        <%= link_to new_package_path, class: 'float-left nav-link mr-3' do %>
+          <span class="btn btn-default nav-btn">
+            <i class="sybina-0191-folder-download mr-05"></i>
+            Import Icons
+          </span>
+        <% end %>
+        <a class="nav-link float-left dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-link-in pull-xs-left img-<%= current_user.image_url.present? %>">
+            <%= image_tag(current_user.image_url) if current_user.image_url.present? %>
+            <i class="placeholder"></i>
+          </span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
+            <i class="text-danger mr-05"></i>
+            Log out
+          <% end %>
+        </div>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to login_path, class: "nav-link" do %>
+          <span class="nav-link-in">Login</span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

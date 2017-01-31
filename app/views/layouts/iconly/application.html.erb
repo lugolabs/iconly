@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/iconly/header' %>
+  <%= render_flash %>
 
-<%= yield %>
+  <div class="app-body">
+    <div class="container">
+      <%= yield %>
+    </div>
 
+    <%= render 'layouts/iconly/footer' %>
+  </div>
+
+  <%= yield :script %>
 </body>
 </html>

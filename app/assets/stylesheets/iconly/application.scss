@@ -1,0 +1,16 @@
+$brand-primary: #5d9cec;
+$brand-success: #81c868;
+$brand-info:    #34d3eb;
+$brand-warning: #ffbd4a;
+$brand-danger:  #f05050;
+$brand-default: #5fbeaa;
+$color-pale:    #98a6ad;
+$body-font:     'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font:  'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@import 'bootstrap';
+@import 'overrides';
+@import 'buttons';
+@import 'typography';
+@import 'layout';
+@import 'header';

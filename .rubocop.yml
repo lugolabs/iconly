@@ -13,3 +13,6 @@ Documentation:
 
 Style/EmptyMethod:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 25

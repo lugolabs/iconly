@@ -1,0 +1,36 @@
+.dropdown-menu,
+.form-control,
+.btn {
+  font-size: inherit;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.alert-danger ul {
+  margin-bottom: 0;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover,
+.open > .dropdown-toggle.btn-default {
+  background-color: #5fbeaa !important;
+  border: 1px solid #5fbeaa !important;
+  color: #fff;
+}
+
+.text-default {
+  color: #5fbeaa;
+}
+
+.badge-pale {
+  background-color: $color-pale;
+}

@@ -1,0 +1,230 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $body-font;
+  font-size: 14px;
+  padding-top: 6rem;
+  position: relative;
+  background: #ebeff2;
+  margin: 0;
+  overflow-x: hidden;
+  background: #ebeff2;
+  color: #797979;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #505458;
+  font-family: $heading-font;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: .9rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+h3 small {
+  color: #444444;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h4 small {
+  color: #444;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-lg {
+  font-size: 4rem;
+}
+
+.text-sm {
+  font-size: .8rem;
+}
+
+.text-pale {
+  color: $color-pale;
+}
+
+.app-body {
+  position: relative;
+  padding-bottom: 7rem;
+  min-height: 100%;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar {
+  font-family: $heading-font;
+
+  a, a:visited {
+    display: block;
+    margin: 2px 0;
+  }
+}
+
+// buttons
+
+.btn-svg {
+  width: 3rem;
+  height: 3rem;
+  transition: background .2s;
+  margin-bottom: .5rem;
+  margin-right: .3rem;
+
+  &.selected {
+    background: #ccc;
+  }
+
+  svg {
+    margin-left: calc(50% - 0.5rem);
+    margin-top: .2rem;
+  }
+
+  &.btn-sm {
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &.remove {
+    position: relative;
+    transition: none;
+
+    .rm {
+      position: absolute;
+      top: -.4rem;
+      right: -.4rem;
+      font-size: .6rem;
+      background: #fff;
+      border-radius: 50%;
+      width: 1.2rem;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      text-align: center;
+      display: none;
+    }
+
+    &:hover .rm {
+      display: block;
+    }
+  }
+}
+
+.project-pkg-true {
+  .btn-svg:hover {
+    background: #ddd;
+    cursor: pointer;
+  }
+
+  .card .btn-svg:hover {
+    background: #eee;
+  }
+}
+
+.inline-links {
+  a, a:visited {
+    color: $color-pale;
+    padding: .2rem .5rem;
+    display: inline-block;
+    border-radius: .15rem;
+  }
+
+  a:hover {
+    background: #ddd;
+  }
+
+  a:active {
+    background: #ccc;
+  }
+
+  a.shared {
+    color: $brand-default;
+  }
+}
+
+// utils
+
+.m-a-0:after {
+  margin: 0;
+}
+
+.mr-05 {
+  margin-right: .5rem;
+}
+
+.mt-05 {
+  margin-top: .5rem;
+}
+
+.m-b-2 {
+  margin-bottom: 2rem;
+}
+
+.brd-btm {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: .8rem;
+}
+
+@media(max-width: 768px) {
+  body {
+    padding-top: 8rem;
+  }
+}
