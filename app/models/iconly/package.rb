@@ -1,6 +1,7 @@
 module Iconly
   class Package < ApplicationRecord
     belongs_to :user, class_name: 'User'
+    has_many :icons
 
     extend FriendlyId
     friendly_id :name, use: [:slugged, :scoped], scope: :user
