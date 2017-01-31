@@ -87,6 +87,11 @@ h5 {
   color: $color-pale;
 }
 
+.text-dark,
+.text-dark a {
+  color: #333;
+}
+
 .app-body {
   position: relative;
   padding-bottom: 7rem;

@@ -2,7 +2,6 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class ProjectsController < ApplicationController
-    before_action :require_sign_in
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
     def index

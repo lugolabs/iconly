@@ -1,1 +1,25 @@
 <h1 class="page-header">Projects</h1>
+
+<% @projects.each do |project| %>
+
+  <h3 class="font-bold text-dark"><%= link_to project.name, project %></h3>
+  <div class="card">
+    <div class="card-block">
+      <% project.icons.each do |icon| %>
+        <div class="btn btn-svg float-left" title="<%= icon.name %>">
+          <%= icon.contents.html_safe %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>
+
+<% unless @projects.any? %>
+  <div class="jumbotron">
+    <h3>No projects created yet</h3>
+    <hr/>
+    <p>No worries, there's still time.</p>
+    <%= link_to 'Start now', new_project_path, class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>

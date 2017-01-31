@@ -2,7 +2,6 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class PackagesController < ApplicationController
-    before_action :require_sign_in
     before_action :set_package, only: :destroy
 
     def new

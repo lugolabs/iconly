@@ -11,3 +11,9 @@ twitter:
   name: twitter
   slug: twitter
   contents: <svg></svg>
+
+check:
+  package: mars
+  name: check
+  slug: check
+  contents: <svg></svg>
