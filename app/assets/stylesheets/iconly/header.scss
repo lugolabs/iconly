@@ -7,8 +7,6 @@ $nav-link-color: #6e7b88;
     .nav-link {
       color: $nav-link-color;
       font-weight: bold;
-      padding-top: .7rem;
-      padding-bottom: .7rem;
       transition: color .2s;
 
       &:hover {
@@ -22,7 +20,7 @@ $nav-link-color: #6e7b88;
   }
 
   .navbar-nav > li > .dropdown-menu {
-    margin-top: 0;
+    margin-top: .45rem !important;
     font-size: inherit;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -89,6 +87,7 @@ $nav-link-color: #6e7b88;
   }
 
   .app-search {
+    margin-top: .7rem;
     margin-left: 1.6rem;
     padding-left: 24px;
     padding-right: 10px;

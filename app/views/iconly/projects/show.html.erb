@@ -1,19 +1,53 @@
-<p id="notice"><%= notice %></p>
+<%= title @project.name %>
 
-<p>
-  <strong>User:</strong>
-  <%= @project.user_id %>
-</p>
+<div class="row page-header">
+  <div class="col-sm-6">
+    <h1><%= @project.name %></h1>
+  </div>
+  <div class="col-sm-6 text-right">
+    <a class="dropdown-toggle m-a-0 btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      <i class=""></i>
+    </a>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+    <div class="dropdown-menu dropdown-menu-right">
+      <%= link_to edit_project_path, class: 'dropdown-item' do %>
+        <i class="sybina-0181-file-add mr-05 text-info"></i>
+        Edit Project
+      <% end %>
+      <%= link_to project_path,
+        method: :delete,
+        data: { confirm: 'Are you sure you want to delete this project?' },
+        class: 'dropdown-item' do %>
+        <i class="mr-05 text-danger"></i>
+        Delete Project
+      <% end %>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @project.slug %>
-</p>
+      <div class="dropdown-divider"></div>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+      <%= link_to generate_font_project_path, class: 'dropdown-item', data: { method: :post } do %>
+        <i class="sybina-0191-folder-download text-primary mr-05"></i>
+        Generate Font
+      <% end %>
+
+      <div class="dropdown-divider"></div>
+
+      <%= link_to new_project_path, class: 'dropdown-item' do %>
+        <i class="mr-05 text-info"></i>
+        New Project
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'packages', locals: {
+  packages: @packages,
+  project: @project,
+  project_icons: @project.project_icons.map(&:icon_id) } %>
+
+<%= content_for :script do %>
+<script>
+  $(function() {
+    app.Project.start('<%= @project.id %>');
+  });
+</script>
+<% end %>
