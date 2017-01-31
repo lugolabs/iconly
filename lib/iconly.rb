@@ -1,4 +1,5 @@
 require 'friendly_id'
+require 'carrierwave'
 require 'sass-rails'
 require 'jquery-rails'
 require 'turbolinks'

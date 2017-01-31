@@ -28,7 +28,7 @@ module Iconly
         post projects_url, params: { project: { name: 'New project' } }
       end
 
-      assert_redirected_to project_url(Project.last)
+      assert_redirected_to project_url(Project.friendly.find('new-project'))
     end
 
     test 'should show project' do

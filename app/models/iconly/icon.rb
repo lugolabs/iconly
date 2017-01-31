@@ -2,6 +2,8 @@ module Iconly
   class Icon < ApplicationRecord
     belongs_to :package, class_name: 'Package'
 
+    mount_uploader :svg, SvgUploader
+
     extend FriendlyId
     friendly_id :name, use: [:slugged, :scoped], scope: :package
 
@@ -19,6 +21,10 @@ module Iconly
       icons
         .order('iconly_packages.name')
         .group_by(&:package)
+    end
+
+    def svg_path
+      "public#{svg.url}"
     end
   end
 end

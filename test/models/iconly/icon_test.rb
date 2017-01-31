@@ -6,6 +6,15 @@ module Iconly
       assert_equal %i(package), Icon.reflect_on_all_associations.map(&:name)
     end
 
+    test 'SVG uploader' do
+      icon = Icon.new(
+        name: 'Google Plus',
+        svg: File.open(File.join(fixture_path, 'iconly/files/googleplus.svg'))
+      )
+      assert icon.svg.url.ends_with?('googleplus.svg')
+    end
+
+    # all_packages
     test 'all_packages without search' do
       user     = iconly_users(:fred)
       packages = [iconly_packages(:jupiter), iconly_packages(:mars)]
