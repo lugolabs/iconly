@@ -16,6 +16,21 @@
         <%= f.text_field :name, class: 'form-control', placeholder: 'Choose a name' %>
       </div>
 
+      <div class="form-group">
+        <%= f.label :icon_files, 'Icons' %>
+        <div class="card">
+          <div class="card-block text-center pt-5 pb-5">
+            <div class="mb-3">
+              <i class="sybina-0191-folder-download mr-05 text-pale font-lg"></i>
+            </div>
+            <button class="btn btn-smt btn-custom btn-white btn-file">
+              Add files ...
+              <%= f.file_field :icon_files, type: :file, multiple: true, class: 'form-control' %>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="actions mt-5">
         <%= f.submit 'Save', class: 'btn btn-success' %> &nbsp;or
         <%= link_to 'Cancel', packages_path, class: 'text-danger' %>

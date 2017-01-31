@@ -18,17 +18,25 @@
               </a>
 
               <div class="dropdown-menu">
+                <%= link_to projects_path, class: 'dropdown-item' do %>
+                  <i class="mr-05 text-info"></i>
+                  Projects
+                <% end %>
+
+                <div class="dropdown-divider"></div>
+
                 <% if current_user.projects.any? %>
                   <% current_user.projects.each do |project| %>
                     <%= link_to project, class: 'dropdown-item' do %>
-                      <i class="sybina-0184-files mr-05 text-primary"></i>
+                      <i class="mr-05 text-primary"></i>
                       <%= project.name %>
                     <% end %>
                   <% end %>
+
                   <div class="dropdown-divider"></div>
                 <% end %>
                 <%= link_to new_project_path, class: 'dropdown-item' do %>
-                  <i class="sybina-0181-file-add mr-05 text-info"></i>
+                  <i class="mr-05 text-info"></i>
                   New Project
                 <% end %>
               </div>

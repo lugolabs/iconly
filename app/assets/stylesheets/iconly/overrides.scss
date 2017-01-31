@@ -34,3 +34,17 @@
 .badge-pale {
   background-color: $color-pale;
 }
+
+.alert-danger ul {
+  padding-left: 1rem;
+}
+
+.field_with_errors {
+  label {
+    color: #f99;
+  }
+
+  .form-control {
+    border: 1px solid #ebcccc;
+  }
+}
