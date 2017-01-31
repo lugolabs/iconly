@@ -13,6 +13,12 @@ module Iconly
       assert_equal ["Name can't be blank"], package.errors.full_messages
     end
 
+    test 'validates icon files when required' do
+      package = Package.new(name: 'Saturn', icon_files_required: true)
+      assert_not package.valid?
+      assert_equal ["Icon files can't be blank"], package.errors.full_messages
+    end
+
     test 'shared checks for shared flag' do
       assert_equal [iconly_packages(:jupiter)], Package.shared
     end

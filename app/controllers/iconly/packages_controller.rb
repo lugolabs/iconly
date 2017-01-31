@@ -11,9 +11,10 @@ module Iconly
 
     def create
       @package = current_user.packages.build(package_params)
+      @package.icon_files_required = true
 
       if @package.save
-        redirect_to packages_url, notice: 'Great, more new shiny icons in the bag!'
+        redirect_to projects_url, notice: 'Great, more new shiny icons in the bag!'
       else
         render :new
       end
@@ -25,7 +26,7 @@ module Iconly
 
     def destroy
       @package.destroy
-      redirect_to packages_url, notice: 'Package is now gone'
+      redirect_to projects_url, notice: 'Package is now gone'
     end
 
     private
@@ -35,7 +36,7 @@ module Iconly
     end
 
     def package_params
-      params.require(:package).permit(:name, :shared)
+      params.require(:package).permit(:name, icon_files: [])
     end
   end
 end
