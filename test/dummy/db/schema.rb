@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130233140) do
+ActiveRecord::Schema.define(version: 20170131002414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "iconly_packages", force: :cascade do |t|
+  create_table "iconly_icons", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid     "package_id", null: false
+    t.string   "name"
+    t.string   "slug"
+    t.string   "svg"
+    t.text     "contents"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["package_id"], name: "index_iconly_icons_on_package_id", using: :btree
+  end
+
+  create_table "iconly_packages", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.uuid     "user_id",    null: false
     t.string   "name"
     t.boolean  "shared"

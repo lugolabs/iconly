@@ -4,5 +4,7 @@ module Iconly
 
     extend FriendlyId
     friendly_id :name, use: [:slugged, :scoped], scope: :user
+
+    validates :name, presence: true, uniqueness: { scope: :user }
   end
 end
