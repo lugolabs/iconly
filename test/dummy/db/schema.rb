@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170131081131) do
+ActiveRecord::Schema.define(version: 20170131084626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20170131081131) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_iconly_packages_on_user_id", using: :btree
+  end
+
+  create_table "iconly_project_icons", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid     "project_id", null: false
+    t.uuid     "icon_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["icon_id"], name: "index_iconly_project_icons_on_icon_id", using: :btree
+    t.index ["project_id"], name: "index_iconly_project_icons_on_project_id", using: :btree
   end
 
   create_table "iconly_projects", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|

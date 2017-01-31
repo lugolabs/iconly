@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  icon: facebook
+
+two:
+  project: one
+  icon: twitter
+
+three:
+  project: two
+  icon: facebook
+
+fourth:
+  project: two
+  icon: twitter
