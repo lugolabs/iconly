@@ -1,7 +1,5 @@
 module Iconly
   class Icon < ApplicationRecord
-    SVG_FOLDER = 'test/dummy/public'.freeze
-
     belongs_to :package, class_name: 'Package'
     has_many :project_icons, dependent: :destroy
 
@@ -26,7 +24,7 @@ module Iconly
     end
 
     def svg_path
-      "#{SVG_FOLDER}#{svg.url}"
+      "#{Iconly.svg_folder}#{svg.url}"
     end
   end
 end

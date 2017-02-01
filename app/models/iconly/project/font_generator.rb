@@ -18,7 +18,7 @@ module Iconly
         }
 
         raw_options = {
-          debug:        false,
+          debug:        Rails.env.development?,
           input:        input,
           templates:    %w(iconly.css),
           font_name:    @font_name,

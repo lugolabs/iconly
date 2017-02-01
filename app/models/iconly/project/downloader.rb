@@ -1,7 +1,7 @@
 module Iconly
   class Project
     class Downloader
-      DOWNLOADS_FOLDER = Rails.root.join('tmp/downloads').to_s
+      # DOWNLOADS_FOLDER = Rails.root.join('tmp/downloads').to_s
 
       def initialize(project)
         @project = project
@@ -45,7 +45,7 @@ module Iconly
       end
 
       def zip_file_path
-        @zip_file_path ||= File.join(DOWNLOADS_FOLDER, "#{@project.slug}_#{Time.current.to_i}.zip")
+        @zip_file_path ||= File.join(Iconly.downloads_folder, "#{@project.slug}_#{Time.current.to_i}.zip")
       end
     end
   end
