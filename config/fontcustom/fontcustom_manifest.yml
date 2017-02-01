@@ -4,19 +4,19 @@
     "previous": ""
   },
   "fonts": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts/iconly.ttf",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts/iconly.svg",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts/iconly.woff",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts/iconly.eot"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts/iconly.ttf",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts/iconly.svg",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts/iconly.woff",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts/iconly.eot"
   ],
   "glyphs": {
     "facebook": {
       "codepoint": 61711,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-l4iq10/facebook.svg"
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-fksh48/facebook.svg"
     },
     "twitter": {
       "codepoint": 61712,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-l4iq10/twitter.svg"
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-fksh48/twitter.svg"
     }
   },
   "options": {
@@ -32,13 +32,13 @@
     "force": false,
     "input": {
       "templates": "config/fontcustom/templates",
-      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-l4iq10"
+      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-fksh48"
     },
     "no_hash": true,
     "output": {
-      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa",
-      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts",
-      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/fonts"
+      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm",
+      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts",
+      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/fonts"
     },
     "preprocessor_path": null,
     "quiet": false,
@@ -48,6 +48,6 @@
     "verbose": true
   },
   "templates": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170131-37193-11z0tqa/iconly.css"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170201-40017-s6d4nm/iconly.css"
   ]
 }

@@ -17,11 +17,12 @@ module Iconly
     end
 
     test 'should create package' do
+      file = fixture_file_upload('iconly/files/facebook.svg')
       assert_difference('Iconly::Package.count') do
         post packages_url, params: {
           package: {
             name:       'Saturn',
-            icon_files: [File.open(File.join(fixture_path, 'iconly/files/twitter.svg'))]
+            icon_files: [file]
           }
         }
       end
