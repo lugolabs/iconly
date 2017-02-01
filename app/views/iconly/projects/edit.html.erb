@@ -1,6 +1,5 @@
-<h1>Editing Project</h1>
+<%= title 'Editing Project' %>
 
-<%= render 'form', project: @project %>
+<h1 class="page-header">Editing Project</h1>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<%= render 'form', project: @project, cancel_path: project_path(@project) %>

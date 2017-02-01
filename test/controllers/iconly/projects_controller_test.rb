@@ -32,29 +32,39 @@ module Iconly
     end
 
     test 'should show project' do
-      get project_url(@project)
+      get project_url(id: @project)
 
       assert_response :success
     end
 
-    # test 'should get edit' do
-    #   get edit_project_url(@project)
-    #   assert_response :success
-    # end
+    test 'should get edit' do
+      get edit_project_url(@project)
+      assert_response :success
+    end
 
-    # test 'should update project' do
-    #   patch project_url(@project), params: {
-    #     project: { name: @project.name, slug: @project.slug, user_id: @project.user_id }
-    #   }
-    #   assert_redirected_to project_url(@project)
-    # end
+    test 'should update project' do
+      patch project_url(@project), params: {
+        project: { name: 'New name' }
+      }
+      assert_redirected_to project_url(@project)
+    end
 
-    # test 'should destroy project' do
-    #   assert_difference('Project.count', -1) do
-    #     delete project_url(@project)
-    #   end
+    test 'should destroy project' do
+      assert_difference('Iconly::Project.count', -1) do
+        delete project_url(@project)
+      end
 
-    #   assert_redirected_to projects_url
-    # end
+      assert_redirected_to projects_url
+    end
+
+    test 'should generate font' do
+      downloader = stub(call: fixture_file_upload('iconly/files/facebook.svg'))
+      Project::Downloader.expects(:new).with(@project).returns(downloader)
+
+      post generate_font_project_url(@project)
+
+      assert_response :success
+      assert response.body.include?('</svg>')
+    end
   end
 end

@@ -10,11 +10,11 @@
     </a>
 
     <div class="dropdown-menu dropdown-menu-right">
-      <%= link_to edit_project_path, class: 'dropdown-item' do %>
+      <%= link_to edit_project_path(@project), class: 'dropdown-item' do %>
         <i class="sybina-0181-file-add mr-05 text-info"></i>
         Edit Project
       <% end %>
-      <%= link_to project_path,
+      <%= link_to project_path(@project),
         method: :delete,
         data: { confirm: 'Are you sure you want to delete this project?' },
         class: 'dropdown-item' do %>
@@ -24,7 +24,7 @@
 
       <div class="dropdown-divider"></div>
 
-      <%= link_to generate_font_project_path, class: 'dropdown-item', data: { method: :post } do %>
+      <%= link_to generate_font_project_path(@project), class: 'dropdown-item', data: { method: :post } do %>
         <i class="sybina-0191-folder-download text-primary mr-05"></i>
         Generate Font
       <% end %>

@@ -2,7 +2,7 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class ProjectsController < ApplicationController
-    before_action :set_project, only: [:show, :edit, :update, :destroy]
+    before_action :set_project, only: [:show, :edit, :update, :destroy, :generate_font]
 
     def index
       @projects = ProjectIcon.all_projects(current_user.id, params[:q])
@@ -23,7 +23,7 @@ module Iconly
       @project = current_user.projects.build(project_params)
 
       if @project.save
-        redirect_to @project, notice: 'Great, a new project was created!'
+        redirect_to project_path(@project), notice: 'Great, a new project was created!'
       else
         render :new
       end
@@ -31,7 +31,7 @@ module Iconly
 
     def update
       if @project.update(project_params)
-        redirect_to @project, notice: 'Awsome, project updated all right!'
+        redirect_to project_path(@project), notice: 'Awsome, project updated all right!'
       else
         render :edit
       end
@@ -42,7 +42,7 @@ module Iconly
         send_file zip_file
       else
         flash[:error] = 'Sorry an error occurred generating the font, please try again.'
-        redirect_to @project
+        redirect_to project_path(@project)
       end
     end
 
