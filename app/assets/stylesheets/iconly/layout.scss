@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #505458;
+  color: $color-dark;
   font-family: $heading-font;
   margin: 10px 0;
 }
@@ -89,7 +89,7 @@ h5 {
 
 .text-dark,
 .text-dark a {
-  color: #333;
+  color: $color-dark;
 }
 
 .app-body {

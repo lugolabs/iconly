@@ -1,8 +1,10 @@
+<%= title 'Projects' %>
+
 <h1 class="page-header">Projects</h1>
 
 <% @projects.each do |project, project_icons| %>
 
-  <h3 class="font-bold text-dark"><%= link_to project.name, project %></h3>
+  <h3 class="font-bold text-dark"><%= link_to project.name, project_path(project) %></h3>
   <div class="card mb-4">
     <div class="card-block">
       <% project_icons.each do |project_icon| %>

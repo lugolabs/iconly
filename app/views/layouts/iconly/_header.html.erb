@@ -27,7 +27,7 @@
 
                 <% if current_user.projects.any? %>
                   <% current_user.projects.each do |project| %>
-                    <%= link_to project, class: 'dropdown-item' do %>
+                    <%= link_to project_path(project), class: 'dropdown-item' do %>
                       <i class="mr-05 text-primary"></i>
                       <%= project.name %>
                     <% end %>
@@ -52,7 +52,7 @@
     </div>
   </div>
 
-    <ul class="nav navbar-nav navbar-user">
+  <ul class="nav navbar-nav navbar-user">
     <% if signed_in? %>
       <li class="dropdown user clearfix">
         <%= link_to new_package_path, class: 'float-left nav-link mr-3' do %>

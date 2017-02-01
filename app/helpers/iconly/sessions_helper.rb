@@ -3,11 +3,11 @@ module Iconly
     protected
 
     def logout_path
-      '/'
+      Iconly.logout_path
     end
 
     def login_path
-      '/'
+      Iconly.login_path
     end
 
     def current_user

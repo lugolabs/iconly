@@ -10,5 +10,6 @@ require 'iconly/engine'
 require 'iconly/zip_file_generator'
 
 module Iconly
-  # Your code goes here...
+  mattr_accessor :logout_path
+  mattr_accessor :login_path
 end
