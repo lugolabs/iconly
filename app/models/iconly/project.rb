@@ -8,5 +8,11 @@ module Iconly
     friendly_id :name, use: [:slugged, :scoped], scope: :user
 
     scope :owned_by, ->(owner_id) { where('iconly_projects.user_id' => owner_id) }
+
+    private
+
+    def should_generate_new_friendly_id?
+      name_changed?
+    end
   end
 end

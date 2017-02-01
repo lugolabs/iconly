@@ -26,5 +26,11 @@ module Iconly
     def svg_path
       "#{Iconly.svg_folder}#{svg.url}"
     end
+
+    private
+
+    def should_generate_new_friendly_id?
+      name_changed?
+    end
   end
 end
