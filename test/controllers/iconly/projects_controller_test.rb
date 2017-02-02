@@ -46,7 +46,7 @@ module Iconly
       patch project_url(@project), params: {
         project: { name: 'New name' }
       }
-      assert_redirected_to project_url(@project)
+      assert_redirected_to project_url(@project.reload)
     end
 
     test 'should destroy project' do

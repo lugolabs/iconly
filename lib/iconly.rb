@@ -13,6 +13,5 @@ module Iconly
   mattr_accessor  :logout_path,
                   :login_path,
                   :svg_folder,
-                  :downloads_folder,
-                  :owner_class
+                  :downloads_folder
 end
