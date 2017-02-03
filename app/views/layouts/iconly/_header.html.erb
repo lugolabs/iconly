@@ -28,7 +28,7 @@
                 <% if current_user.projects.any? %>
                   <% current_user.projects.each do |project| %>
                     <%= link_to project_path(project), class: 'dropdown-item' do %>
-                      <i class="mr-05 text-primary"></i>
+                      <i class="iconly-0182-file-check mr-05 text-primary"></i>
                       <%= project.name %>
                     <% end %>
                   <% end %>
@@ -71,7 +71,7 @@
 
         <div class="dropdown-menu dropdown-menu-right">
           <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
-            <i class="text-danger mr-05"></i>
+            <i class="iconly-0441-power-switch text-danger mr-05"></i>
             Log out
           <% end %>
         </div>

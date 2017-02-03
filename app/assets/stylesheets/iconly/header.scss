@@ -26,18 +26,6 @@ $nav-link-color: #6e7b88;
     border-top-right-radius: 0;
   }
 
-  .user {
-    .dropdown-menu {
-      margin-top:  -.16rem !important;
-    }
-
-    .dropdown-toggle:after {
-      border-bottom-color: $nav-link-color;
-      position: relative;
-      top: -.7rem;
-    }
-  }
-
   .first {
     margin-left: 3em;
   }
@@ -57,18 +45,30 @@ $nav-link-color: #6e7b88;
   }
 
   .nav-btn {
-    line-height: 10px;
     height: 30px;
-    margin-top: 5px;
+    margin-top: .5rem;
+    padding-top: .3rem;
   }
 
   .user {
+    .dropdown-menu {
+      margin-top:  -.16rem !important;
+    }
+
+    .dropdown-toggle:after {
+      border-bottom-color: $nav-link-color;
+      position: relative;
+      top: -.5rem;
+    }
+
     .nav-link-in {
       width: 36px;
       position: relative;
       border: 2px solid $nav-link-color;
       border-radius: 50%;
       overflow: hidden;
+      position: relative;
+      top: .3rem;
     }
 
     .placeholder {
@@ -111,7 +111,10 @@ $nav-link-color: #6e7b88;
       position: absolute;
       left: 1rem;
       color: #99a4ab;
-      font-size: .7rem;
+
+      &:before {
+        font-size: .7rem;
+      }
     }
   }
 
@@ -123,6 +126,7 @@ $nav-link-color: #6e7b88;
 
   .navbar-user {
     position: absolute;
+    top: .2rem;
     right: 1rem;
     text-align: right;
   }

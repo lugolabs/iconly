@@ -11,14 +11,14 @@
 
     <div class="dropdown-menu dropdown-menu-right">
       <%= link_to edit_project_path(@project), class: 'dropdown-item' do %>
-        <i class="mr-05 text-info"></i>
+        <i class="iconly-0014-pencil mr-05 text-info"></i>
         Edit Project
       <% end %>
       <%= link_to project_path(@project),
         method: :delete,
         data: { confirm: 'Are you sure you want to delete this project?' },
         class: 'dropdown-item' do %>
-        <i class="mr-05 text-danger"></i>
+        <i class="iconly-0129-trash mr-05 text-danger"></i>
         Delete Project
       <% end %>
 
