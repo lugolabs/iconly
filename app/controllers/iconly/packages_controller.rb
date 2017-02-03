@@ -5,6 +5,7 @@ module Iconly
     before_action :set_package, only: :destroy
 
     def new
+      store_path_after_create_package
       @package = Package.new
     end
 
@@ -13,7 +14,7 @@ module Iconly
       @package.icon_files_required = true
 
       if @package.save
-        redirect_to projects_url, notice: 'Great, more new shiny icons in the bag!'
+        redirect_to path_after_create_package, notice: 'Great, more new shiny icons in the bag!'
       else
         render :new
       end
@@ -25,7 +26,7 @@ module Iconly
 
     def destroy
       @package.destroy
-      redirect_to projects_url, notice: 'Package is now gone'
+      redirect_to (request.referer || projects_url), notice: 'Package is now gone'
     end
 
     private
@@ -36,6 +37,15 @@ module Iconly
 
     def package_params
       params.require(:package).permit(:name, icon_files: [])
+    end
+
+    def store_path_after_create_package
+      session.delete :path_after_create_package
+      session[:path_after_create_package] = request.referer if request.referer.present?
+    end
+
+    def path_after_create_package
+      session[:path_after_create_package] || projects_url
     end
   end
 end

@@ -116,8 +116,11 @@ h5 {
   font-family: $heading-font;
 
   a, a:visited {
-    display: block;
-    margin: 2px 0;
+    line-height: 1;
+  }
+
+  table {
+    width: 100%;
   }
 }
 

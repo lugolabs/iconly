@@ -4,170 +4,26 @@
     "previous": ""
   },
   "fonts": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts/iconly.ttf",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts/iconly.svg",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts/iconly.woff",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts/iconly.eot"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts/iconly.ttf",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts/iconly.svg",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts/iconly.woff",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts/iconly.eot"
   ],
   "glyphs": {
-    "ai": {
-      "codepoint": 61713,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/ai.svg"
+    "facebook": {
+      "codepoint": 61751,
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-1idpxr9/facebook.svg"
     },
-    "apple": {
-      "codepoint": 61714,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/apple.svg"
-    },
-    "barn": {
-      "codepoint": 61715,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/barn.svg"
-    },
-    "basic_mail": {
-      "codepoint": 61716,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/basic_mail.svg"
-    },
-    "bed": {
-      "codepoint": 61717,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/bed.svg"
-    },
-    "bookmark": {
-      "codepoint": 61718,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/bookmark.svg"
-    },
-    "buoy": {
-      "codepoint": 61719,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/buoy.svg"
-    },
-    "chevron-right-circle": {
-      "codepoint": 61720,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/chevron-right-circle.svg"
-    },
-    "codio": {
-      "codepoint": 61721,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/codio.svg"
-    },
-    "cog": {
-      "codepoint": 61722,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/cog.svg"
-    },
-    "dashboard": {
-      "codepoint": 61723,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/dashboard.svg"
-    },
-    "device_manager": {
-      "codepoint": 61724,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/device_manager.svg"
-    },
-    "discount": {
-      "codepoint": 61725,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/discount.svg"
-    },
-    "disqus": {
-      "codepoint": 61726,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/disqus.svg"
-    },
-    "drafting_compass": {
-      "codepoint": 61727,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/drafting_compass.svg"
-    },
-    "drill": {
-      "codepoint": 61728,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/drill.svg"
-    },
-    "earth": {
-      "codepoint": 61729,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/earth.svg"
-    },
-    "icon_command": {
-      "codepoint": 61730,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_command.svg"
-    },
-    "icon_comment-text-right": {
-      "codepoint": 61731,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_comment-text-right.svg"
-    },
-    "icon_folder": {
-      "codepoint": 61732,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_folder.svg"
-    },
-    "icon_inbox-close": {
-      "codepoint": 61733,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_inbox-close.svg"
-    },
-    "icon_iphone-big-charge": {
-      "codepoint": 61734,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_iphone-big-charge.svg"
-    },
-    "icon_laptop": {
-      "codepoint": 61735,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_laptop.svg"
-    },
-    "icon_piechart-50": {
-      "codepoint": 61736,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/icon_piechart-50.svg"
-    },
-    "motion_detector": {
-      "codepoint": 61737,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/motion_detector.svg"
-    },
-    "move_by_trolley": {
-      "codepoint": 61738,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/move_by_trolley.svg"
-    },
-    "mustache": {
-      "codepoint": 61739,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/mustache.svg"
-    },
-    "notebook": {
-      "codepoint": 61740,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/notebook.svg"
-    },
-    "ok-circle": {
-      "codepoint": 61741,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/ok-circle.svg"
-    },
-    "paperclip": {
-      "codepoint": 61742,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/paperclip.svg"
-    },
-    "plush": {
-      "codepoint": 61743,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/plush.svg"
-    },
-    "resize-small": {
-      "codepoint": 61744,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/resize-small.svg"
-    },
-    "resize-v": {
-      "codepoint": 61745,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/resize-v.svg"
-    },
-    "script": {
-      "codepoint": 61746,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/script.svg"
-    },
-    "star": {
-      "codepoint": 61747,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/star.svg"
-    },
-    "trash-can": {
-      "codepoint": 61748,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/trash-can.svg"
-    },
-    "unlink": {
-      "codepoint": 61749,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/unlink.svg"
-    },
-    "zerply": {
-      "codepoint": 61750,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp/zerply.svg"
+    "twitter": {
+      "codepoint": 61752,
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-1idpxr9/twitter.svg"
     }
   },
   "options": {
     "autowidth": false,
     "config": false,
     "css_selector": ".iconly-{{glyph}}",
-    "debug": true,
+    "debug": false,
     "font_ascent": 448,
     "font_descent": 64,
     "font_design_size": 16,
@@ -176,13 +32,13 @@
     "force": false,
     "input": {
       "templates": "/Users/arti/work/lugo/iconly/iconly/config/fontcustom/templates",
-      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-nl23jp"
+      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-1idpxr9"
     },
     "no_hash": true,
     "output": {
-      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y",
-      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts",
-      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/fonts"
+      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2",
+      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts",
+      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/fonts"
     },
     "preprocessor_path": null,
     "quiet": false,
@@ -192,6 +48,6 @@
     "verbose": true
   },
   "templates": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-77703-17is10y/iconly.css"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-82864-19j31b2/iconly.css"
   ]
 }

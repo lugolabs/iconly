@@ -10,10 +10,10 @@
       <% packages.each do |package, _| %>
         <tr>
           <td>
-            <%= link_to package.name, "##{package.to_param}", 'data-scroll-to' => package.to_param, class: 'text-pale text-bold float-left' %>
+            <%= link_to package.name, "##{package.to_param}", 'data-scroll-to' => package.to_param, class: 'text-pale text-bold' %>
           </td>
-          <td>
-            <span class="badge badge-pale float-right"><%= package.icons.size %></span>
+          <td class="text-right">
+            <span class="badge badge-pale"><%= package.icons.size %></span>
           </td>
         </tr>
       <% end %>
