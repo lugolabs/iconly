@@ -4,19 +4,19 @@
     "previous": ""
   },
   "fonts": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts/iconly.ttf",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts/iconly.svg",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts/iconly.woff",
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts/iconly.eot"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts/iconly.ttf",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts/iconly.svg",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts/iconly.woff",
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts/iconly.eot"
   ],
   "glyphs": {
     "facebook": {
       "codepoint": 61711,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-m1qyeg/facebook.svg"
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1r9b25u/facebook.svg"
     },
     "twitter": {
       "codepoint": 61712,
-      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-m1qyeg/twitter.svg"
+      "source": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1r9b25u/twitter.svg"
     }
   },
   "options": {
@@ -32,13 +32,13 @@
     "force": false,
     "input": {
       "templates": "config/fontcustom/templates",
-      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-m1qyeg"
+      "vectors": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1r9b25u"
     },
     "no_hash": true,
     "output": {
-      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3",
-      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts",
-      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/fonts"
+      "css": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab",
+      "fonts": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts",
+      "preview": "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/fonts"
     },
     "preprocessor_path": null,
     "quiet": false,
@@ -48,6 +48,6 @@
     "verbose": true
   },
   "templates": [
-    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170202-59678-1f5mrq3/iconly.css"
+    "/var/folders/py/mnqh0bdx1w13jgvmw_ls9tjr0000gn/T/d20170203-81871-1c6trab/iconly.css"
   ]
 }

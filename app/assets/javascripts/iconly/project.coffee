@@ -42,7 +42,7 @@ class app.Project
 
   _addToProjectIcons: (svg, iconId)->
     markup = """
-      <div class="btn btn-svg btn-sm remove" title="Remove from project" data-action="remove-from-project" data-id="#{iconId}">
+      <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="#{iconId}">
         #{svg}
         <i class="sybina-0822-cross2 bg-danger text-white rm"></i>
       </div>

@@ -13,7 +13,7 @@
             <%= link_to package.name, "##{package.to_param}", 'data-scroll-to' => package.to_param, class: 'text-pale text-bold float-left' %>
           </td>
           <td>
-            <span class="badge badge-pale float-right"><%= package.icons.count %></span>
+            <span class="badge badge-pale float-right"><%= package.icons.size %></span>
           </td>
         </tr>
       <% end %>
@@ -62,7 +62,7 @@
         <div id="project-icons">
           <% project.icons.each do |icon| %>
             <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
-              <%= icon.contents.html_safe %>
+              <%= icon.markup %>
               <i class="bg-danger text-white rm"></i>
             </div>
           <% end %>

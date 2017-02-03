@@ -27,6 +27,10 @@ module Iconly
       "#{Iconly.svg_folder}#{svg.url}"
     end
 
+    def markup
+      (contents || '').gsub(']>', '').html_safe
+    end
+
     private
 
     def should_generate_new_friendly_id?

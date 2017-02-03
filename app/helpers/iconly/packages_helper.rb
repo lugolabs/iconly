@@ -19,7 +19,7 @@ module Iconly
         id:     icon.id,
         action: 'add-to-project'
       }
-      content_tag :div, icon.contents.gsub(']>', '').html_safe, class: css_class.join(' '), data: data, title: icon.name
+      content_tag :div, icon.markup, class: css_class.join(' '), data: data, title: icon.name
     end
   end
 end
