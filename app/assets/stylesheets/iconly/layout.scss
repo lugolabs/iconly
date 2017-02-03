@@ -129,23 +129,29 @@ h5 {
   transition: background .2s;
   margin-bottom: .5rem;
   margin-right: .3rem;
+  text-align: center;
 
   &.selected {
     background: #ccc;
   }
 
   svg {
-    margin-left: calc(50% - 0.5rem);
-    margin-top: .2rem;
+    margin-left: calc(50% - 0.7rem);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   &.btn-sm {
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
 
     svg {
-      width: 1rem;
-      height: 1rem;
+      max-width: 1.2rem;
+      max-height: 1.2rem;
     }
   }
 

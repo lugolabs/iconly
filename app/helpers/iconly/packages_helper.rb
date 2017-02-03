@@ -8,7 +8,7 @@ module Iconly
       classes = %w(text-sm mr-1)
       classes << 'shared' if package.shared?
       link_to share_package_path(package), class: classes.join(' '), data: { action: 'share-package' } do
-        content_tag :i, '', class: 'sybina-0801-share2'
+        content_tag :span, 'Make public', class: 'text-pale'
       end
     end
 
@@ -19,7 +19,7 @@ module Iconly
         id:     icon.id,
         action: 'add-to-project'
       }
-      content_tag :div, icon.contents.html_safe, class: css_class.join(' '), data: data, title: icon.name
+      content_tag :div, icon.contents.gsub(']>', '').html_safe, class: css_class.join(' '), data: data, title: icon.name
     end
   end
 end

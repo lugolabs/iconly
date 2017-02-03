@@ -6,14 +6,18 @@
         <span class="badge badge-pale float-right"><%= packages.size %></span>
       </h4>
 
+      <table>
       <% packages.each do |package, _| %>
-        <%= link_to "##{package.to_param}",
-          'data-scroll-to' => package.to_param,
-          class: 'text-pale text-bold' do %>
-          <i class="mr-05 text-default"></i>
-          <%= package.name %>
-        <% end %>
+        <tr>
+          <td>
+            <%= link_to package.name, "##{package.to_param}", 'data-scroll-to' => package.to_param, class: 'text-pale text-bold float-left' %>
+          </td>
+          <td>
+            <span class="badge badge-pale float-right"><%= package.icons.count %></span>
+          </td>
+        </tr>
       <% end %>
+      </table>
     </div>
   </div>
 
@@ -28,11 +32,11 @@
           <% if my_package?(package) %>
             <%= link_to_share package %>
 
-            <%= link_to package,
+            <%= link_to package_path(package),
               method: :delete,
               class: 'text-danger mt-05 list-inline-item text-sm',
               data: { confirm: 'You sure you want to delete this package?' } do %>
-              <i class="text-pale"></i>
+              <span class="text-pale">Delete</span>
             <% end %>
           <% end %>
         </div>
@@ -57,7 +61,7 @@
         </h4>
         <div id="project-icons">
           <% project.icons.each do |icon| %>
-            <div class="btn btn-svg btn-sm remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
+            <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
               <%= icon.contents.html_safe %>
               <i class="bg-danger text-white rm"></i>
             </div>
