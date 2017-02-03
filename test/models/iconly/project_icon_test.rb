@@ -9,7 +9,7 @@ module Iconly
     # all_projects
     test 'all_projects without search' do
       user     = iconly_users(:fred)
-      projects = [iconly_projects(:one), iconly_projects(:two)]
+      projects = [iconly_projects(:one), iconly_projects(:two), iconly_projects(:three)]
 
       ProjectIcon.all_projects(user.id).each_with_index do |prj, i|
         assert_equal projects[i], prj[0]

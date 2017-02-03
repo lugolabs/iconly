@@ -9,3 +9,13 @@ two:
   user: fred
   name: Second Project
   slug: second-project
+
+three:
+  user: fred
+  name: Third Project
+  slug: third-project
+
+fourth:
+  user: frida
+  name: Fourth Project
+  slug: fourth-project
