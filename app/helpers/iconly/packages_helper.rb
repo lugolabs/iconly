@@ -5,10 +5,13 @@ module Iconly
     end
 
     def link_to_share(package)
-      classes = %w(text-sm mr-1)
+      classes = %w(iconly-0645-earth text-sm mr-1)
       classes << 'shared' if package.shared?
-      link_to share_package_path(package), class: classes.join(' '), data: { action: 'share-package' } do
-        content_tag :span, 'Make public', class: 'text-pale'
+      link_to(share_package_path(package),
+              class: classes.join(' '),
+              title: 'Make public',
+              data: { action: 'share-package' }) do
+        content_tag :span, '', class: 'text-pale'
       end
     end
 

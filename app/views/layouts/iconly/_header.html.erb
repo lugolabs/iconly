@@ -19,7 +19,7 @@
 
               <div class="dropdown-menu">
                 <%= link_to projects_path, class: 'dropdown-item' do %>
-                  <i class="mr-05 text-info"></i>
+                  <i class="iconly-0184-files mr-05 text-primary"></i>
                   Projects
                 <% end %>
 
@@ -36,7 +36,7 @@
                   <div class="dropdown-divider"></div>
                 <% end %>
                 <%= link_to new_project_path, class: 'dropdown-item' do %>
-                  <i class="mr-05 text-info"></i>
+                  <i class="iconly-0181-file-add mr-05 text-info"></i>
                   New Project
                 <% end %>
               </div>
@@ -47,7 +47,8 @@
     </div>
     <div class="col-md-6">
       <form role="search" class="form-inline app-search pull-xs-left" action="">
-          <%= text_field_tag :q, params[:q], placeholder: 'Search ...', class: 'form-control' %>
+        <i class="iconly-0803-magnifier magnifier"></i>
+        <%= text_field_tag :q, params[:q], placeholder: 'Search ...', class: 'form-control' %>
       </form>
     </div>
   </div>
@@ -57,7 +58,7 @@
       <li class="dropdown user clearfix">
         <%= link_to new_package_path, class: 'float-left nav-link mr-3' do %>
           <span class="btn btn-default nav-btn">
-            <i class="sybina-0191-folder-download mr-05"></i>
+            <i class="iconly-0189-folder-plus mr-05"></i>
             Import Icons
           </span>
         <% end %>

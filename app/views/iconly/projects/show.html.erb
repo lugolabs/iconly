@@ -6,12 +6,12 @@
   </div>
   <div class="col-sm-6 text-right">
     <a class="dropdown-toggle m-a-0 btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      <i class=""></i>
+      <i class="iconly-0812-menu"></i>
     </a>
 
     <div class="dropdown-menu dropdown-menu-right">
       <%= link_to edit_project_path(@project), class: 'dropdown-item' do %>
-        <i class="sybina-0181-file-add mr-05 text-info"></i>
+        <i class="mr-05 text-info"></i>
         Edit Project
       <% end %>
       <%= link_to project_path(@project),
@@ -25,14 +25,14 @@
       <div class="dropdown-divider"></div>
 
       <%= link_to generate_font_project_path(@project), class: 'dropdown-item', data: { method: :post } do %>
-        <i class="sybina-0191-folder-download text-primary mr-05"></i>
+        <i class="iconly-0191-folder-download text-primary mr-05"></i>
         Generate Font
       <% end %>
 
       <div class="dropdown-divider"></div>
 
       <%= link_to new_project_path, class: 'dropdown-item' do %>
-        <i class="mr-05 text-info"></i>
+        <i class="iconly-0181-file-add mr-05 text-info"></i>
         New Project
       <% end %>
     </div>

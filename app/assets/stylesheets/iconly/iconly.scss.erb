@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "iconly";
+  src: url(<%= asset_path "iconly/iconly.eot" %>);
+  src: url(<%= asset_path "iconly/iconly.eot?#iefix" %>) format("embedded-opentype"),
+       url(<%= asset_path "iconly/iconly.woff" %>) format("woff"),
+       url(<%= asset_path "iconly/iconly.ttf" %>) format("truetype"),
+       url(<%= asset_path "iconly/iconly.svg#iconly" %>) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.iconly-0129-trash:before,
+.iconly-0181-file-add:before,
+.iconly-0184-files:before,
+.iconly-0189-folder-plus:before,
+.iconly-0191-folder-download:before,
+.iconly-0298-baby:before,
+.iconly-0299-baby2:before,
+.iconly-0645-earth:before,
+.iconly-0803-magnifier:before,
+.iconly-0812-menu:before,
+.iconly-paint_palette:before {
+  display: inline-block;
+  font-family: "iconly";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.iconly-0129-trash:before { content: "\f139"; }
+.iconly-0181-file-add:before { content: "\f13a"; }
+.iconly-0184-files:before { content: "\f13b"; }
+.iconly-0189-folder-plus:before { content: "\f13c"; }
+.iconly-0191-folder-download:before { content: "\f13d"; }
+.iconly-0298-baby:before { content: "\f13e"; }
+.iconly-0299-baby2:before { content: "\f13f"; }
+.iconly-0645-earth:before { content: "\f140"; }
+.iconly-0803-magnifier:before { content: "\f141"; }
+.iconly-0812-menu:before { content: "\f142"; }
+.iconly-paint_palette:before { content: "\f143"; }
