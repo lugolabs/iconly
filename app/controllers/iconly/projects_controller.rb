@@ -23,7 +23,8 @@ module Iconly
       @project = current_user.projects.build(project_params)
 
       if @project.save
-        redirect_to project_path(@project), notice: 'Great, a new project was created!'
+        redirect_to project_path(@project),
+                    notice: '<i class="iconly-0298-baby mr-05"></i> Great, a new project was created!'
       else
         render :new
       end
@@ -31,7 +32,8 @@ module Iconly
 
     def update
       if @project.update(project_params)
-        redirect_to project_path(@project), notice: 'Awsome, project updated all right!'
+        redirect_to project_path(@project),
+                    notice: '<i class="iconly-0298-baby mr-05"></i> Awsome, project updated all right!'
       else
         render :edit
       end
@@ -41,14 +43,15 @@ module Iconly
       if (zip_file = Project::Downloader.new(@project).call)
         send_file zip_file
       else
-        flash[:error] = 'Sorry an error occurred generating the font, please try again.'
+        flash[:error] = '<i class="iconly-0298-baby2 mr-05"></i> '\
+                        'Sorry an error occurred generating the font, please try again.'
         redirect_to project_path(@project)
       end
     end
 
     def destroy
       @project.destroy
-      redirect_to projects_url, notice: 'Project is gone to the bin.'
+      redirect_to projects_url, notice: '<i class="iconly-0298-baby mr-05"></i> Project is gone to the bin.'
     end
 
     private

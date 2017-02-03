@@ -2,7 +2,7 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class PackagesController < ApplicationController
-    before_action :set_package, only: :destroy
+    before_action :set_package, only: %i(share destroy)
 
     helper_method :path_after_create_package
 
@@ -16,19 +16,20 @@ module Iconly
       @package.icon_files_required = true
 
       if @package.save
-        redirect_to path_after_create_package, notice: 'Great, more new shiny icons in the bag!'
+        redirect_to path_after_create_package,
+                    notice: '<i class="iconly-0298-baby mr-05"></i> Great, more new shiny icons in the bag!'
       else
         render :new
       end
     end
 
     def share
-      @package.update(shared: !@package.shared)
+      @package.update!(shared: !@package.shared?)
     end
 
     def destroy
       @package.destroy
-      redirect_to (request.referer || projects_path), notice: 'Package is now gone'
+      redirect_to (request.referer || projects_path), notice: '<i class="iconly-0298-baby mr-05"></i> Package is now gone'
     end
 
     private

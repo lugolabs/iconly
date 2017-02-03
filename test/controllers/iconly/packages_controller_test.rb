@@ -37,5 +37,18 @@ module Iconly
 
       assert_redirected_to projects_url
     end
+
+    test "share makes package public if isn't" do
+      assert @package.shared?
+
+      post share_package_url(@package)
+
+      assert_not @package.reload.shared?
+
+      # Undo
+      post share_package_url(@package)
+
+      assert @package.reload.shared?
+    end
   end
 end

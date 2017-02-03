@@ -4,7 +4,7 @@ Iconly::Engine.routes.draw do
   end
 
   resources :packages, only: %i(new create destroy) do
-    get :share, on: :member
+    post :share, on: :member
   end
 
   resources :project_icons, only: %i(create destroy)

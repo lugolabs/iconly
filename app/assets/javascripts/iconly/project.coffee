@@ -62,7 +62,7 @@ class app.Project
       target.removeClass 'shared'
     else
       target.addClass 'shared'
-    $.post url, { _method: 'PATCH', package: { shared: shared } }
+    $.post url
 
   @start: (projectId, rootUrl) ->
     app.project ||= new app.Project(projectId, rootUrl)
