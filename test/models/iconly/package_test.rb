@@ -28,16 +28,23 @@ module Iconly
                    Package.shared_or_owned_by(iconly_users(:fred).id)
     end
 
-    test 'should generate icons when required' do
-      package = iconly_packages(:jupiter)
-      package.icon_files = [mock(original_filename: 'heart.svg', read: '<svg></svg>')]
-      package.icon_files_required = true
+    test 'after save it generates icons when required' do
+      package = iconly_users(:fred).packages.build(
+        name:                'Rainbow',
+        icon_files:          icon_files,
+        icon_files_required: true
+      )
 
       package.save!
 
-      assert_equal 3, package.icons.count
+      assert_equal 1, package.icons.count
       icon = package.icons.find_by(name: 'heart')
       assert_equal '<svg></svg>', icon.contents
+      assert_equal 1, package.icon_count
+    end
+
+    def icon_files
+      [stub(original_filename: 'heart.svg', read: '<svg></svg>')]
     end
   end
 end

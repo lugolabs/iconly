@@ -11,7 +11,7 @@ module Iconly
     validates :name, presence: true, uniqueness: { scope: :user }
     validates :icon_files, presence: true, if: :icon_files_required
 
-    after_save :generate_icons, if: :icon_files_required
+    after_create :generate_icons, if: :icon_files_required
 
     scope :shared, -> { where(shared: true) }
     scope :shared_or_owned_by, ->(user_id) { where(user_id: user_id).or(shared) }
@@ -23,6 +23,7 @@ module Iconly
         name = file.original_filename.split('.')[0..-2].join('.')
         icons.create!(name: name, svg: file, contents: file.read)
       end
+      update(icon_count: icon_files.size)
     end
 
     def should_generate_new_friendly_id?

@@ -13,7 +13,7 @@
             <%= link_to package.name, "##{package.to_param}", 'data-scroll-to' => package.to_param, class: 'text-pale text-bold' %>
           </td>
           <td class="text-right">
-            <span class="badge badge-pale"><%= package.icons.size %></span>
+            <span class="badge badge-pale"><%= package.icon_count %></span>
           </td>
         </tr>
       <% end %>
