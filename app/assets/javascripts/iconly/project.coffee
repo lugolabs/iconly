@@ -2,9 +2,9 @@ class app.Project
   constructor: (@projectId, @rootUrl) ->
     self = this
     $(document)
-      .on('click', '[data-action="add-to-project"]', -> self._toggleInProject(this))
+      .on('click', '[data-action="add-to-project"]',      -> self._toggleInProject(this))
       .on('click', '[data-action="remove-from-project"]', -> self._toggleInProject(this, true))
-      .on('click', '[data-action="share-package"]', (e) -> self._sharePackage(e, this))
+      .on('click', '[data-action="share-package"]',   (e) -> self._sharePackage(e, this))
 
   _toggleInProject: (target, remove) ->
     target = $(target)
@@ -44,7 +44,7 @@ class app.Project
     markup = """
       <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="#{iconId}">
         #{svg}
-        <i class="sybina-0822-cross2 bg-danger text-white rm"></i>
+        <i class="bg-danger text-white rm"></i>
       </div>
     """
     $(markup)

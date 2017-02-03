@@ -19,5 +19,6 @@
 //= require iconly/jquery.sticky
 //= require iconly/app
 //= require iconly/project
+//= require iconly/package
 //= require iconly/scroller
 

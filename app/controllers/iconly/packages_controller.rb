@@ -4,6 +4,8 @@ module Iconly
   class PackagesController < ApplicationController
     before_action :set_package, only: :destroy
 
+    helper_method :path_after_create_package
+
     def new
       store_path_after_create_package
       @package = Package.new
@@ -26,7 +28,7 @@ module Iconly
 
     def destroy
       @package.destroy
-      redirect_to (request.referer || projects_url), notice: 'Package is now gone'
+      redirect_to (request.referer || projects_path), notice: 'Package is now gone'
     end
 
     private
@@ -40,12 +42,12 @@ module Iconly
     end
 
     def store_path_after_create_package
-      session.delete :path_after_create_package
+      session.delete(:path_after_create_package) if session[:path_after_create_package]
       session[:path_after_create_package] = request.referer if request.referer.present?
     end
 
     def path_after_create_package
-      session[:path_after_create_package] || projects_url
+      session[:path_after_create_package] || projects_path
     end
   end
 end

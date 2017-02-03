@@ -193,6 +193,26 @@ h5 {
   }
 }
 
+.package-files {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  background: #eee;
+  padding: 1rem;
+  border-radius: .3rem;
+
+  .in {
+    height: 10rem;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .badge {
+    font-weight: normal;
+    margin-right: .2rem;
+    padding: .2rem .3rem;
+  }
+}
+
 .inline-links {
   a, a:visited {
     color: $color-pale;

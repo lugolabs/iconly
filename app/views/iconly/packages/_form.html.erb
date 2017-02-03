@@ -19,9 +19,9 @@
       <div class="form-group">
         <%= f.label :icon_files, 'Icons' %>
         <div class="card">
-          <div class="card-block text-center pt-5 pb-5">
-            <div class="mb-3">
-              <i class="sybina-0191-folder-download mr-05 text-pale font-lg"></i>
+          <div class="card-block text-center pt-4 pb-4">
+            <div class="package-files">
+              <div class="in" id="package-files">No files selected</div>
             </div>
             <button class="btn btn-smt btn-custom btn-white btn-file">
               Add files ...
@@ -33,8 +33,16 @@
 
       <div class="actions mt-5">
         <%= f.submit 'Save', class: 'btn btn-success' %> &nbsp;or
-        <%= link_to 'Cancel', projects_path, class: 'text-danger' %>
+        <%= link_to 'Cancel', path_after_create_package, class: 'text-danger' %>
       </div>
     <% end %>
   </div>
 </div>
+
+<% content_for :script do %>
+  <script>
+    $(function() {
+      app.Package.start('#package_icon_files', '#package-files');
+    });
+  </script>
+<% end %>
