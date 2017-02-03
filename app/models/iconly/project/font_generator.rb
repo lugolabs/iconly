@@ -58,7 +58,7 @@ module Iconly
       end
 
       def config_folder
-        'config/fontcustom'
+        File.expand_path('../../../../../config/fontcustom', __FILE__)
       end
     end
   end
