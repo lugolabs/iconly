@@ -5,7 +5,7 @@ module Iconly
     end
 
     def link_to_share(package)
-      classes = %w(iconly-0645-earth text-sm mr-1)
+      classes = %w(iconly-earth text-sm mr-1)
       classes << 'shared' if package.shared?
       link_to(share_package_path(package),
               class: classes.join(' '),

@@ -17,7 +17,7 @@ module Iconly
 
       if @package.save
         redirect_to path_after_create_package,
-                    notice: '<i class="iconly-0298-baby mr-05"></i> Great, more new shiny icons in the bag!'
+                    notice: '<i class="iconly-baby mr-05"></i> Great, more new shiny icons in the bag!'
       else
         render :new
       end
@@ -29,7 +29,7 @@ module Iconly
 
     def destroy
       @package.destroy
-      redirect_to (request.referer || projects_path), notice: '<i class="iconly-0298-baby mr-05"></i> Package is now gone'
+      redirect_to (request.referer || projects_path), notice: '<i class="iconly-baby mr-05"></i> Package is now gone'
     end
 
     private

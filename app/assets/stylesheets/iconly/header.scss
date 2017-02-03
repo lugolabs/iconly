@@ -104,11 +104,11 @@ $nav-link-color: #6e7b88;
       background: transparent;
       width: 100%;
       color: #fff;
-      font-weight: 600;
     }
 
     .magnifier {
       position: absolute;
+      top: .2rem;
       left: 1rem;
       color: #99a4ab;
 
@@ -130,6 +130,10 @@ $nav-link-color: #6e7b88;
     right: 1rem;
     text-align: right;
   }
+}
+
+input:-webkit-autofill {
+  background: transparent;
 }
 
 .navbar-brand {
