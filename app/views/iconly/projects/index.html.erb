@@ -12,12 +12,16 @@
           <%= project_icon.icon.contents.html_safe %>
         </div>
       <% end %>
+
+      <% if project_icons.blank? %>
+        <div class="text-pale">No icons added yet.</div>
+      <% end %>
     </div>
   </div>
 
 <% end %>
 
-<% unless @projects.any? %>
+<% if @projects.blank? %>
   <div class="jumbotron">
     <h3>No projects created yet</h3>
     <hr/>
