@@ -18,7 +18,7 @@
               </a>
 
               <div class="dropdown-menu">
-                <%= link_to projects_path, class: 'dropdown-item' do %>
+                <%= link_to iconly.projects_path, class: 'dropdown-item' do %>
                   <i class="iconly-files mr-05 text-primary"></i>
                   Projects
                 <% end %>
@@ -27,7 +27,7 @@
 
                 <% if current_user.projects.any? %>
                   <% current_user.projects.each do |project| %>
-                    <%= link_to project_path(project), class: 'dropdown-item' do %>
+                    <%= link_to iconly.project_path(project), class: 'dropdown-item' do %>
                       <i class="iconly-file-check mr-05 text-primary"></i>
                       <%= project.name %>
                     <% end %>
@@ -35,7 +35,7 @@
 
                   <div class="dropdown-divider"></div>
                 <% end %>
-                <%= link_to new_project_path, class: 'dropdown-item' do %>
+                <%= link_to iconly.new_project_path, class: 'dropdown-item' do %>
                   <i class="iconly-file-add mr-05 text-info"></i>
                   New Project
                 <% end %>
@@ -56,7 +56,7 @@
   <ul class="nav navbar-nav navbar-user">
     <% if signed_in? %>
       <li class="dropdown user clearfix">
-        <%= link_to new_package_path, class: 'float-left nav-link mr-3' do %>
+        <%= link_to iconly.new_package_path, class: 'float-left nav-link mr-3' do %>
           <span class="btn btn-default nav-btn">
             <i class="iconly-folder-plus mr-05"></i>
             Import Icons
