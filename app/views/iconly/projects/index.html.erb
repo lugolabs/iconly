@@ -22,10 +22,16 @@
 <% end %>
 
 <% if @projects.blank? %>
-  <div class="jumbotron">
+<div class="jumbotron text-center">
+  <i class="iconly-baby2 mr-05 font-lg"></i>
+  <% if params[:q].present? %>
+    <h3 class="mb-4">Can't find that icon ...</h3>
+    <%= link_to 'Clear search', projects_path, class: 'btn btn-lg btn-primary' %>
+  <% else %>
     <h3>No projects created yet</h3>
     <hr/>
     <p>No worries, there's still time.</p>
     <%= link_to 'Start now', new_project_path, class: 'btn btn-lg btn-primary' %>
-  </div>
+  <% end %>
+</div>
 <% end %>

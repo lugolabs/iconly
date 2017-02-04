@@ -51,26 +51,32 @@
         </div>
       </div>
     <% end %>
+
+    <% if packages.blank? %>
+    <div class="jumbotron text-center">
+      <i class="iconly-baby2 mr-05 font-lg"></i>
+      <h3 class="mb-4">Can't find that icon ...</h3>
+      <%= link_to 'Clear search', project_path(project), class: 'btn btn-lg btn-primary' %>
+    </div>
+    <% end %>
   </div>
 
-  <% if project %>
-    <div class="col-md-2 hidden-sm-down project-pkg-true">
-      <div id="sticky-project-icons">
-        <h4 class="text-pale brd-btm">
-          Project Icons
-          <span class="badge badge-pale float-right" id="project-icons-count"><%= project.icons.size %></span>
-        </h4>
-        <div id="project-icons">
-          <% project.icons.each do |icon| %>
-            <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
-              <%= icon.markup %>
-              <i class="iconly-cross bg-danger text-white rm"></i>
-            </div>
-          <% end %>
-        </div>
+  <div class="col-md-2 hidden-sm-down project-pkg-true">
+    <div id="sticky-project-icons">
+      <h4 class="text-pale brd-btm">
+        Project Icons
+        <span class="badge badge-pale float-right" id="project-icons-count"><%= project.icons.size %></span>
+      </h4>
+      <div id="project-icons">
+        <% project.icons.each do |icon| %>
+          <div class="btn btn-svg btn-sm float-left remove" title="Remove from project" data-action="remove-from-project" data-id="<%= icon.id %>">
+            <%= icon.markup %>
+            <i class="iconly-cross bg-danger text-white rm"></i>
+          </div>
+        <% end %>
       </div>
     </div>
-  <% end %>
+  </div>
 </div> <!-- end row -->
 
 <%= content_for :script do %>
