@@ -175,9 +175,13 @@ a, a:visited, a:hover, a:focus {
       border-radius: 50%;
       width: 1.2rem;
       height: 1.2rem;
-      line-height: 1.2rem;
+      line-height: 1.3rem;
       text-align: center;
       display: none;
+
+      &:before {
+        font-size: 12px;
+      }
     }
 
     &:hover .rm {
