@@ -7,7 +7,7 @@ module Iconly
     end
 
     def render_flash
-      content_tag :div, class: 'container' do
+      content_tag :div, class: 'container flash-container' do
         flash.each do |name, msg|
           div = content_tag :div, class: alert_class_name(name) do
             btn = content_tag :button, type: 'button', class: 'close', 'data-dismiss' => 'alert' do
@@ -29,7 +29,7 @@ module Iconly
                    when 'error' then 'danger'
                    else flash_name
                    end
-      "alert alert-#{class_name} m-b-2"
+      "alert alert-#{class_name} mb-4"
     end
   end
 end

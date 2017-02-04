@@ -7,11 +7,11 @@
     <span>Icon</span><span class="text-default">ly</span>
   </a>
 
+  <% if signed_in? %>
   <div class="row float-left">
     <div class="col-md-6">
       <div class="collapse navbar-collapse" id="navbar-top-links">
         <ul class="nav navbar-nav first">
-          <% if signed_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="nav-link-in">Projects</span>
@@ -41,7 +41,6 @@
                 <% end %>
               </div>
             </li>
-          <% end %>
         </ul>
       </div>
     </div>
@@ -52,6 +51,7 @@
       </form>
     </div>
   </div>
+  <% end %>
 
   <ul class="nav navbar-nav navbar-user">
     <% if signed_in? %>
