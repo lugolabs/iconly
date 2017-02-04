@@ -1,8 +1,18 @@
 <footer class="app-footer">
   <div class="container">
-    <a class="text-uppercase font-bold text-pale" href="/" title="Iconly">
-      <span>Icon</span><span class="text-default">ly</span>
-    </a>
-    &copy; 2017. All rights reserved.
+    <div class="row">
+      <div class="col-md-8">
+        <a class="text-uppercase font-bold text-pale" href="/" title="Iconly">
+          <span>Icon</span><span class="text-default">ly</span>
+        </a>
+        &copy; 2017. All rights reserved.
+      </div>
+      <div class="col-md-4 text-right">
+        <%= link_to Iconly::GITHUB_URL, class: 'btn btn-custom btn-white' do %>
+          <i class="iconly-github"></i>
+          Github
+        <% end %>
+      </div>
+    </div>
   </div>
 </footer>

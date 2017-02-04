@@ -10,6 +10,8 @@ require 'iconly/engine'
 require 'iconly/zip_file_generator'
 
 module Iconly
+  GITHUB_URL = 'https://github.com/lugolabs/iconly'.freeze
+
   mattr_accessor  :logout_path,
                   :login_path,
                   :svg_folder,
