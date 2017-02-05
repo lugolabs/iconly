@@ -9,9 +9,10 @@ module Iconly
     test 'SVG uploader' do
       icon = Icon.new(
         name: 'Google Plus',
-        svg: File.open(File.join(fixture_path, 'iconly/files/googleplus.svg'))
+        svg:  File.open(File.join(fixture_path, 'iconly/files/googleplus.svg'))
       )
       assert icon.svg.url.ends_with?('googleplus.svg')
+      assert icon.svg_path.ends_with?(icon.svg.url)
     end
 
     # all_packages

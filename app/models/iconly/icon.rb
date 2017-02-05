@@ -8,7 +8,7 @@ module Iconly
     extend FriendlyId
     friendly_id :name, use: [:slugged, :scoped], scope: :package
 
-    validates :name, presence: true
+    validates :name, :contents, presence: true
 
     scope :search, ->(term) { where('iconly_icons.name ILIKE ?', "%#{term}%") }
 
@@ -24,7 +24,7 @@ module Iconly
     end
 
     def svg_path
-      "#{Iconly.svg_folder}#{svg.url}"
+      File.join(Iconly.svg_folder, svg.try(:url) || '')
     end
 
     def markup
