@@ -11,7 +11,7 @@ module Iconly
 
     def generate_project
       return if projects.any?
-      projects.create(name: 'Untitled Project')
+      projects.create!(name: 'Untitled Project')
     end
   end
 end

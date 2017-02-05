@@ -16,11 +16,11 @@ module Iconly
       assert_equal projects_without_icons, Project.without_icons
     end
 
-    test 'limits project creation by user' do
-      user = iconly_users(:fred)
-      project = user.projects.build(name: 'Another Project')
+    test 'friendly id' do
+      project = project.friendly.find('second-project')
 
-      assert_not project.valid?
+      assert_equal 'second-project', project.slug
+      assert_equal 'Second Project', project.name
     end
   end
 end

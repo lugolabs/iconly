@@ -8,6 +8,7 @@ require 'bootstrap'
 require 'rails-assets-tether'
 require 'iconly/engine'
 require 'iconly/zip_file_generator'
+require 'iconly/concerns/models/project'
 
 module Iconly
   GITHUB_URL = 'https://github.com/lugolabs/iconly'.freeze
