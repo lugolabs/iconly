@@ -10,7 +10,7 @@ module Iconly
       link_to(share_package_path(package),
               class: classes.join(' '),
               title: 'Make public',
-              data: { action: 'share-package' }) do
+              data: { action: 'share-package', toggle: 'iconly-tooltip' }) do
         content_tag :span, '', class: 'text-pale'
       end
     end
@@ -20,9 +20,10 @@ module Iconly
       css_class << 'selected' if project_icons && project_icons.include?(icon.id)
       data = {
         id:     icon.id,
-        action: 'add-to-project'
+        action: 'add-to-project',
+        toggle: 'iconly-tooltip'
       }
-      content_tag :div, icon.markup, class: css_class.join(' '), data: data, title: icon.name
+      content_tag :div, icon.markup, class: css_class.join(' '), data: data, title: icon.human_name
     end
   end
 end

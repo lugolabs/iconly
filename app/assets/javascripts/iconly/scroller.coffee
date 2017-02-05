@@ -1,4 +1,4 @@
-class app.Scroller
+class iconly.Scroller
   constructor: (options = {}) ->
     @_topSpacing = options.topSpacing
     @_root       = $('html body')

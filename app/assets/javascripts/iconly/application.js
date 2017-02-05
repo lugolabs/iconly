@@ -17,7 +17,7 @@
 //= require bootstrap-sprockets
 //
 //= require iconly/jquery.sticky
-//= require iconly/app
+//= require iconly/iconly
 //= require iconly/project
 //= require iconly/package
 //= require iconly/scroller

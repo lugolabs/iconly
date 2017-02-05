@@ -19,5 +19,9 @@
   </div>
 
   <%= yield :script %>
+
+  <script>
+    $(function() { iconly.start(); });
+  </script>
 </body>
 </html>

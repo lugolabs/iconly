@@ -31,6 +31,10 @@ module Iconly
       (contents || '').gsub(']>', '').html_safe
     end
 
+    def human_name
+      name.humanize(capitalize: false)
+    end
+
     private
 
     def should_generate_new_friendly_id?

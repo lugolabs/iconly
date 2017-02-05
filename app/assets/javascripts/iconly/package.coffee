@@ -1,4 +1,4 @@
-class app.Package
+class iconly.Package
   constructor: (@fileInputSelector, @messageSelector) ->
     $(document).on 'change', @fileInputSelector, (e) => @_addFiles(e)
 
@@ -22,4 +22,4 @@ class app.Package
     message
 
   @start: (fileInputSelector, messageSelector) ->
-    app.package ||= new app.Package(fileInputSelector, messageSelector)
+    iconly.package ||= new iconly.Package(fileInputSelector, messageSelector)

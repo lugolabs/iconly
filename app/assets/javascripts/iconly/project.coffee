@@ -1,4 +1,4 @@
-class app.Project
+class iconly.Project
   constructor: (@projectId, @rootUrl) ->
     self = this
     $(document)
@@ -65,4 +65,4 @@ class app.Project
     $.post url
 
   @start: (projectId, rootUrl) ->
-    app.project ||= new app.Project(projectId, rootUrl)
+    iconly.project ||= new iconly.Project(projectId, rootUrl)

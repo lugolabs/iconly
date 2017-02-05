@@ -15,6 +15,10 @@ module Iconly
       assert icon.svg_path.ends_with?(icon.svg.url)
     end
 
+    test 'human_name' do
+      assert_equal 'my icon', Icon.new(name: 'my_icon').human_name
+    end
+
     # all_packages
     test 'all_packages without search' do
       user     = iconly_users(:fred)

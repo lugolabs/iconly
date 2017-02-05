@@ -36,7 +36,7 @@
               method: :delete,
               class:  'text-danger mt-05 list-inline-item text-sm',
               title:  'Delete package',
-              data:   { confirm: 'You sure you want to delete this package?' } do %>
+              data:   { confirm: 'You sure you want to delete this package?', toggle: 'iconly-tooltip' } do %>
               <span class="iconly-trash text-pale"></span>
             <% end %>
           <% end %>
@@ -85,7 +85,7 @@
       var options = { topSpacing: 70 };
       $('#sticky-packages').sticky(options);
       $('#sticky-project-icons').sticky(options);
-      new app.Scroller(options)
+      new iconly.Scroller(options)
     });
   </script>
 <% end %>
