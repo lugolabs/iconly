@@ -15,5 +15,12 @@ module Iconly
       projects_without_icons = %i(three fourth).map { |id| iconly_projects(id) }
       assert_equal projects_without_icons, Project.without_icons
     end
+
+    test 'limits project creation by user' do
+      user = iconly_users(:fred)
+      project = user.projects.build(name: 'Another Project')
+
+      assert_not project.valid?
+    end
   end
 end
