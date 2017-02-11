@@ -17,7 +17,7 @@ module Iconly
     end
 
     test 'friendly id' do
-      project = project.friendly.find('second-project')
+      project = Project.friendly.find('second-project')
 
       assert_equal 'second-project', project.slug
       assert_equal 'Second Project', project.name
