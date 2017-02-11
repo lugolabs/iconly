@@ -8,8 +8,6 @@ module Iconly
           has_many :packages
           has_many :projects
 
-          validates :uid, :name, :email, presence: true
-
           after_create :generate_project
         end
 

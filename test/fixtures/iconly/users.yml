@@ -1,15 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 fred:
-  name: Fred
-  email: fred@example.com
   image_url: http://example.com/fred.jpg
-  url: fred@example.com
-  uid: ab11
 
 frida:
-  name: Frida
-  email: frida@example.com
   image_url: http://example.com/frida.jpg
-  url: frida@example.com
-  uid: ab12

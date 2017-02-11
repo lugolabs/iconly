@@ -57,11 +57,7 @@ ActiveRecord::Schema.define(version: 20170203144731) do
   end
 
   create_table "iconly_users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
     t.string   "image_url"
-    t.string   "url"
-    t.string   "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
