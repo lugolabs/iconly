@@ -6,8 +6,6 @@ fred:
   image_url: http://example.com/fred.jpg
   url: fred@example.com
   uid: ab11
-  created_at: <%= Time.current %>
-  updated_at: <%= Time.current %>
 
 frida:
   name: Frida
@@ -15,5 +13,3 @@ frida:
   image_url: http://example.com/frida.jpg
   url: frida@example.com
   uid: ab12
-  created_at: <%= Time.current %>
-  updated_at: <%= Time.current %>
