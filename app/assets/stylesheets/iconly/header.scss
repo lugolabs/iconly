@@ -52,13 +52,15 @@ $nav-link-color: #6e7b88;
 
   .user {
     .dropdown-menu {
-      margin-top:  -.16rem !important;
+      margin-top:  .4rem !important;
     }
 
-    .dropdown-toggle:after {
-      border-bottom-color: $nav-link-color;
-      position: relative;
-      top: -.5rem;
+    .dropdown-toggle {
+      &:after {
+        border-bottom-color: $nav-link-color;
+        position: relative;
+        top: -.5rem;
+      }
     }
 
     .nav-link-in {
@@ -125,9 +127,13 @@ $nav-link-color: #6e7b88;
 
   .navbar-user {
     position: absolute;
-    top: .2rem;
+    top: 0;
     right: 1rem;
     text-align: right;
+
+    &.signed-in-true {
+      top: -.3rem;
+    }
   }
 }
 
