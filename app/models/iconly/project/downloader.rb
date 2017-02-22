@@ -1,8 +1,6 @@
 module Iconly
   class Project
     class Downloader
-      # DOWNLOADS_FOLDER = Rails.root.join('tmp/downloads').to_s
-
       def initialize(project)
         @project = project
       end
