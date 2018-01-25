@@ -3,11 +3,11 @@ Iconly::Engine.routes.draw do
     post :generate_font, on: :member
   end
 
-  resources :packages, only: %i(new create destroy) do
+  resources :packages, only: %i[new create destroy] do
     post :share, on: :member
   end
 
-  resources :project_icons, only: %i(create destroy)
+  resources :project_icons, only: %i[create destroy]
 
   root 'projects#index'
 end

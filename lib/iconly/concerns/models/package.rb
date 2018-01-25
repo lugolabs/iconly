@@ -11,7 +11,7 @@ module Iconly
           attr_accessor :icon_files, :icon_files_required
 
           extend FriendlyId
-          friendly_id :name, use: [:slugged, :scoped], scope: :user
+          friendly_id :name, use: %i[slugged scoped], scope: :user
 
           validates :name, presence: true, uniqueness: { scope: :user }
           validates :icon_files, presence: true, if: :icon_files_required

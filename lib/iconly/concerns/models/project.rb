@@ -10,7 +10,7 @@ module Iconly
           has_many :icons, through: :project_icons
 
           extend FriendlyId
-          friendly_id :name, use: [:slugged, :scoped], scope: :user
+          friendly_id :name, use: %i[slugged scoped], scope: :user
 
           scope :owned_by, ->(owner_id) { where('iconly_projects.user_id' => owner_id) }
           scope :without_icons, -> { where.not(id: ProjectIcon.select(:project_id)) }

@@ -5,7 +5,7 @@ module Iconly
     end
 
     def link_to_share(package)
-      classes = %w(iconly-earth text-sm mr-1)
+      classes = %w[iconly-earth text-sm mr-1]
       classes << 'shared' if package.shared?
       link_to(share_package_path(package),
               class: classes.join(' '),
@@ -16,7 +16,7 @@ module Iconly
     end
 
     def icon_svg(icon, project_icons = nil)
-      css_class = %w(btn btn-svg float-left)
+      css_class = %w[btn btn-svg float-left]
       css_class << 'selected' if project_icons && project_icons.include?(icon.id)
       data = {
         id:     icon.id,

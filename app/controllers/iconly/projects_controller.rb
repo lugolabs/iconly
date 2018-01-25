@@ -2,7 +2,7 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class ProjectsController < ApplicationController
-    before_action :set_project, only: [:show, :edit, :update, :destroy, :generate_font]
+    before_action :set_project, only: %i[show edit update destroy generate_font]
 
     def index
       @projects = ProjectIcon.all_projects(current_user.id, params[:q])

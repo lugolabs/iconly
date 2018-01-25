@@ -2,7 +2,8 @@ require 'test_helper'
 
 module Iconly
   class PackagesHelperTest < ActionView::TestCase
-    include SessionsHelper, PackagesHelper
+    include PackagesHelper
+    include SessionsHelper
 
     test 'my_package check user' do
       package = iconly_packages(:jupiter)

@@ -6,7 +6,7 @@ module Iconly
     mount_uploader :svg, SvgUploader
 
     extend FriendlyId
-    friendly_id :name, use: [:slugged, :scoped], scope: :package
+    friendly_id :name, use: %i[slugged scoped], scope: :package
 
     validates :name, :contents, presence: true
 

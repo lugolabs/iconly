@@ -42,12 +42,12 @@ Gem::Specification.new do |s|
   s.add_dependency 'carrierwave', '~> 1.0'
 
   # Zipping
-  s.add_dependency 'rubyzip', '>= 1.0.0'
+  s.add_dependency 'rubyzip', '~> 1.2.1'
 
   # Development group
 
   s.add_development_dependency 'mocha'
-  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rubocop', '~> 0.49.0'
 
   # Use Puma as the app server
   s.add_development_dependency 'puma', '~> 3.0'

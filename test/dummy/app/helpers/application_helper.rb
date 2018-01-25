@@ -1,3 +1,5 @@
 module ApplicationHelper
-  include Iconly::SessionsHelper, Iconly::Engine.routes.url_helpers, Iconly::ApplicationHelper
+  include Iconly::ApplicationHelper
+  include Iconly::Engine.routes.url_helpers
+  include Iconly::SessionsHelper
 end

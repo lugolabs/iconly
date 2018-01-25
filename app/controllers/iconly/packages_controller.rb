@@ -2,7 +2,7 @@ require_dependency 'iconly/application_controller'
 
 module Iconly
   class PackagesController < ApplicationController
-    before_action :set_package, only: %i(share destroy)
+    before_action :set_package, only: %i[share destroy]
 
     helper_method :path_after_create_package
 
