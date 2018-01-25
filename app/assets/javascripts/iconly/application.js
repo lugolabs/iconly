@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require tether
-//= require bootstrap-sprockets
+//= require popper
+//= require bootstrap
 //
 //= require iconly/jquery.sticky
 //= require iconly/iconly

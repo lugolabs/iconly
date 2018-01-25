@@ -6,7 +6,7 @@
 
   <h3 class="font-bold text-dark"><%= link_to project.name, project_path(project) %></h3>
   <div class="card mb-4">
-    <div class="card-block">
+    <div class="card-body">
       <% project_icons.each do |project_icon| %>
         <div class="btn btn-svg float-left" title="<%= project_icon.icon.name %>">
           <%= project_icon.icon.contents.html_safe %>

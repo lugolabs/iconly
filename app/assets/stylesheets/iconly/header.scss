@@ -2,6 +2,7 @@ $nav-link-color: #6e7b88;
 
 .app-header {
   background: #36404a;
+  margin-bottom: 3rem;
 
   .navbar-nav {
     .nav-link {
@@ -89,7 +90,6 @@ $nav-link-color: #6e7b88;
   }
 
   .app-search {
-    margin-top: .7rem;
     padding-left: 24px;
     padding-right: 10px;
     background: rgba(255, 255, 255, 0.1);
@@ -105,6 +105,10 @@ $nav-link-color: #6e7b88;
       background: transparent;
       width: 100%;
       color: #fff;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
 
     .magnifier {

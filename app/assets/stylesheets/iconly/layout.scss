@@ -5,7 +5,6 @@ html, body {
 body {
   font-family: $body-font;
   font-size: 14px;
-  padding-top: 6rem;
   position: relative;
   background: #ebeff2;
   margin: 0;
@@ -260,10 +259,4 @@ a, a:visited, a:hover, a:focus {
 .brd-btm {
   border-bottom: 1px solid #ddd;
   padding-bottom: .8rem;
-}
-
-@media(max-width: 768px) {
-  body {
-    padding-top: 8rem;
-  }
 }

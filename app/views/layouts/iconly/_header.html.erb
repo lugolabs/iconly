@@ -1,89 +1,83 @@
-<nav class="app-header navbar navbar-toggleable-sm fixed-top">
-  <div class="container">
-    <button class="navbar-toggler btn btn-custom btn-default" type="button" data-toggle="collapse" data-target="#navbar-top-links" aria-controls="navbar-top-links" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
+<nav class="app-header navbar navbar-expand-lg navbar-light1">
+  <a class="navbar-brand" href="/" title="Iconly">
+    <span>Icon</span><span class="text-default">ly</span>
+  </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header-navbar-links" aria-controls="app-header-navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="/" title="Iconly">
-      <span>Icon</span><span class="text-default">ly</span>
-    </a>
+    <div class="collapse navbar-collapse" id="app-header-navbar-links">
+      <% if signed_in? %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-in1">Projects</span>
+            </a>
 
-    <% if signed_in? %>
-    <div class="row float-left">
-      <div class="col-md-6">
-        <div class="collapse navbar-collapse" id="navbar-top-links">
-          <ul class="nav navbar-nav first">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  <span class="nav-link-in">Projects</span>
-                </a>
+            <div class="dropdown-menu">
+              <%= link_to iconly.projects_path, class: 'dropdown-item' do %>
+                <i class="iconly-files mr-05 text-primary"></i>
+                Projects
+              <% end %>
 
-                <div class="dropdown-menu">
-                  <%= link_to iconly.projects_path, class: 'dropdown-item' do %>
-                    <i class="iconly-files mr-05 text-primary"></i>
-                    Projects
+              <div class="dropdown-divider"></div>
+
+              <% if current_user.projects.any? %>
+                <% current_user.projects.each do |project| %>
+                  <%= link_to iconly.project_path(project), class: 'dropdown-item' do %>
+                    <i class="iconly-file-check mr-05 text-primary"></i>
+                    <%= project.name %>
                   <% end %>
+                <% end %>
 
-                  <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
+              <% end %>
+              <%= link_to iconly.new_project_path, class: 'dropdown-item' do %>
+                <i class="iconly-file-add mr-05 text-info"></i>
+                New Project
+              <% end %>
+            </div>
+          </li>
 
-                  <% if current_user.projects.any? %>
-                    <% current_user.projects.each do |project| %>
-                      <%= link_to iconly.project_path(project), class: 'dropdown-item' do %>
-                        <i class="iconly-file-check mr-05 text-primary"></i>
-                        <%= project.name %>
-                      <% end %>
-                    <% end %>
-
-                    <div class="dropdown-divider"></div>
-                  <% end %>
-                  <%= link_to iconly.new_project_path, class: 'dropdown-item' do %>
-                    <i class="iconly-file-add mr-05 text-info"></i>
-                    New Project
-                  <% end %>
-                </div>
-              </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <form role="search" class="form-inline app-search pull-xs-left" action="">
+          <li class="nav-item ml-2">
+            <%= link_to iconly.new_package_path, class: 'btn btn-sm btn-default' do %>
+              <i class="iconly-folder-plus mr-05"></i>
+              Import Icons
+            <% end %>
+          </li>
+        </ul>
+        <form role="search" class="form-inline app-search" action="">
           <i class="iconly-magnifier magnifier"></i>
           <%= text_field_tag :q, params[:q], placeholder: 'Search fonts ...', class: 'form-control' %>
         </form>
-      </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown user">
+            <a class="nav-link float-left dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-in pull-xs-left img-<%= current_user.image_url.present? %>">
+                <%= image_tag(current_user.image_url) if current_user.image_url.present? %>
+                <i class="iconly-user placeholder"></i>
+              </span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right">
+              <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
+                <i class="iconly-power-switch text-danger mr-05"></i>
+                Log out
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      <% end %>
     </div>
-    <% end %>
 
-    <ul class="nav navbar-nav navbar-user signed-in-<%= signed_in? %>">
-      <% if signed_in? %>
-        <li class="dropdown user clearfix">
-          <%= link_to iconly.new_package_path, class: 'float-left nav-link mr-3' do %>
-            <span class="btn btn-default nav-btn">
-              <i class="iconly-folder-plus mr-05"></i>
-              Import Icons
-            </span>
-          <% end %>
-          <a class="nav-link float-left dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="nav-link-in pull-xs-left img-<%= current_user.image_url.present? %>">
-              <%= image_tag(current_user.image_url) if current_user.image_url.present? %>
-              <i class="iconly-user placeholder"></i>
-            </span>
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
-              <i class="iconly-power-switch text-danger mr-05"></i>
-              Log out
-            <% end %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item login">
+    <% unless signed_in? %>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
           <%= link_to login_path, class: 'nav-link' do %>
             <span class="nav-link-in">Login</span>
           <% end %>
         </li>
-      <% end %>
-    </ul>
-  </div>
+      </ul>
+    <% end %>
 </nav>
