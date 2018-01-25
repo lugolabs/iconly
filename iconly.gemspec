@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails-assets-tether', '>= 1.1.0'#, source: 'https://rails-assets.org'
 
   # Database
-  s.add_dependency 'pg'
+  s.add_dependency 'pg', '~> 0.18'
 
   # Slugging
   s.add_dependency 'friendly_id', '~> 5.0.0'
