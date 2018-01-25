@@ -1,7 +1,8 @@
-<nav class="app-header navbar navbar-expand-lg navbar-light1">
-  <a class="navbar-brand" href="/" title="Iconly">
-    <span>Icon</span><span class="text-default">ly</span>
-  </a>
+<nav class="app-header navbar navbar-expand-md">
+  <div class="container">
+    <a class="navbar-brand" href="/" title="Iconly">
+      <span>Icon</span><span class="text-default">ly</span>
+    </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header-navbar-links" aria-controls="app-header-navbar-links" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,7 +10,7 @@
 
     <div class="collapse navbar-collapse" id="app-header-navbar-links">
       <% if signed_in? %>
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ml-md-3">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <span class="nav-link-in1">Projects</span>
@@ -80,4 +81,5 @@
         </li>
       </ul>
     <% end %>
+  </div>
 </nav>
