@@ -10,7 +10,7 @@
 
     <div class="collapse navbar-collapse" id="app-header-navbar-links">
       <% if signed_in? %>
-        <ul class="navbar-nav mr-auto ml-md-3">
+        <ul class="navbar-nav mx-md-3">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <span class="nav-link-in1">Projects</span>
@@ -40,19 +40,18 @@
               <% end %>
             </div>
           </li>
-
-          <li class="nav-item ml-2">
-            <%= link_to iconly.new_package_path, class: 'btn btn-sm btn-default' do %>
-              <i class="iconly-folder-plus mr-05"></i>
-              Import Icons
-            <% end %>
-          </li>
         </ul>
         <form role="search" class="form-inline app-search" action="">
           <i class="iconly-magnifier magnifier"></i>
           <%= text_field_tag :q, params[:q], placeholder: 'Search fonts ...', class: 'form-control' %>
         </form>
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to iconly.new_package_path, class: 'btn btn-sm btn-default mr-4 mt-3' do %>
+              <i class="iconly-folder-plus mr-05"></i>
+              Import Icons
+            <% end %>
+          </li>
           <li class="dropdown user">
             <a class="nav-link float-left dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <span class="nav-link-in pull-xs-left img-<%= current_user.image_url.present? %>">

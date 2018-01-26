@@ -1,7 +1,7 @@
 class iconly.Scroller
   constructor: (options = {}) ->
     @_topSpacing = options.topSpacing
-    @_root       = $('html body')
+    @_root       = $('html, body')
     that         = this
     $('[data-scroll-to]').on 'click', (e) -> that._onScroll(e, this)
 
