@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
 
   # Bootstrap
   s.add_dependency 'bootstrap', '~> 4.0.0.alpha6'
-  s.add_dependency 'rails-assets-tether', '>= 1.1.0'#, source: 'https://rails-assets.org'
+  s.add_dependency 'rails-assets-tether', '>= 1.1.0'
 
   # Database
   s.add_dependency 'pg', '~> 0.18'
@@ -44,11 +44,15 @@ Gem::Specification.new do |s|
   # Zipping
   s.add_dependency 'rubyzip', '~> 1.2.1'
 
-  # Development group
-
+  # Mocking
   s.add_development_dependency 'mocha'
+
+  # Rubocop
   s.add_development_dependency 'rubocop', '~> 0.49.0'
 
   # Use Puma as the app server
   s.add_development_dependency 'puma', '~> 3.0'
+
+  # Security
+  s.add_development_dependency 'bundler-audit'
 end
